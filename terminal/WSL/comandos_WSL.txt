@@ -1,0 +1,75 @@
+📜 Lista de 25 comandos con ejemplos
+whoami → Muestra el usuario actual
+📌 Ejemplo: jorge
+
+pwd → Muestra la ruta donde estás
+📌 Ejemplo: /home/jorge
+
+ls → Lista archivos y carpetas
+📌 Ejemplo: Documentos Descargas imagen.png
+
+
+ls -l → Lista con detalles
+📌 Ejemplo: -rw-r--r-- 1 jorge jorge 2345 Aug 12 archivo.txt
+
+
+ls -a → Lista incluyendo archivos ocultos
+📌 Ejemplo: . .bashrc Documentos
+
+
+cd → Cambiar de carpeta
+cd Documentos
+
+cd .. → Subir una carpeta
+
+cd / → Ir a la raíz del sistema
+
+mkdir → Crear una carpeta
+
+touch → Crear archivo vacío
+touch notas.txt
+
+echo → Escribir texto en archivo
+echo "Hola mundo" > saludo.txt
+
+cat → Mostrar contenido de archivo
+cat saludo.txt
+
+nano → Editar archivo en terminal
+nano notas.txt
+
+rm → Eliminar archivo
+rm saludo.txt
+
+rm -r → Eliminar carpeta y su contenido
+rm -r proyectos
+
+cp → Copiar archivo
+cp archivo.txt copia.txt
+
+mv → Mover o renombrar archivo
+mv copia.txt backup.txt
+
+man → Ver manual de un comando
+man ls
+
+history → Ver historial de comandos
+history
+
+grep → Buscar texto dentro de archivos
+grep "Hola" saludo.txt
+
+find → Buscar archivos
+find . -name "saludo.txt"
+
+uname -a → Ver información del sistema
+uname -a
+
+df -h → Ver espacio en disco
+df -h
+
+free -h → Ver uso de memoria RAM
+free -h
+
+exit → Salir de WSL
+exit
