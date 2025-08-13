@@ -1,0 +1,92 @@
+🖥️ ¿Qué es la terminal?
+La terminal (o consola) es una interfaz de texto donde puedes escribir comandos para interactuar directamente con el sistema operativo.
+
+En lugar de hacer clic en botones o menús, aquí escribes instrucciones.
+Es como tener una “línea directa” con el sistema, sin intermediarios gráficos.
+
+📌 Ejemplo: Si quieres crear una carpeta, en una interfaz gráfica darías clic derecho → “Nueva carpeta”, pero en la terminal podrías escribir:
+mkdir mi_carpeta
+
+Piensa en 3 cosas distintas:
+Monitor/ventana: la terminal es la ventanita negra donde escribes.
+Intérprete: el shell es el “cerebro” que entiende lo que tecleas.
+Tú: escribes comandos que el shell ejecuta.
+
+📌 Analogia: la terminal es el teléfono 📞, el shell es la persona que te escucha 👂, y tus comandos son lo que dices 🗣️.
+
+👉 En Windows puedes abrir: PowerShell, CMD, Windows Terminal (que agrupa varias). 
+En Windows también puedes tener Git Bash o WSL para usar Bash. En Linux/macOS la app se llama usualmente Terminal.
+
+🐚 ¿Qué es el shell?
+Bash significa Bourne Again SHell.
+Es el intérprete que toma lo que escribes en la terminal y se lo pasa al sistema operativo para ejecutarlo.
+Permite ejecutar comandos, crear scripts y automatizar tareas.
+
+📌 Ejemplo en Bash:
+echo "Hola Mundo"
+
+Esto imprime en pantalla:
+Hola Mundo
+
+Hay muchos shells. Dos famosos:
+Bash (muy común en Linux/macOS y también disponible en Windows via Git Bash o WSL).
+PowerShell (nativo de Windows, pero también existe para Linux/macOS).
+
+🧩 La terminal ≠ el shell: la terminal es la ventana; el shell es el intérprete que corre dentro de esa ventana.
+
+
+🟢 ¿Qué es Bash?
+Bash = Bourne Again SHell.
+Es un tipo de shell clásico en Linux/macOS. Trabaja principalmente con texto y tuberías (“pipes”) para encadenar comandos.
+
+Ejemplos en Bash:
+# Mostrar la carpeta actual
+pwd
+
+# Listar archivos
+ls -la
+
+# Crear carpeta y entrar
+mkdir pruebas && cd pruebas
+
+# Crear un archivo con texto
+echo "hola" > notas.txt
+
+# Buscar líneas con 'hola'
+grep 'hola' notas.txt
+
+🔵 ¿Qué es PowerShell?
+PowerShell es el shell moderno de Microsoft. A diferencia de Bash, su “tubería” pasa objetos (con propiedades), 
+no solo texto. Eso lo hace muy potente para automatizar Windows (servicios, registro, procesos, Active Directory, etc.).
+
+Ejemplos equivalentes en PowerShell:
+# Mostrar la carpeta actual
+Get-Location
+
+# Listar archivos (alias: ls, dir)
+Get-ChildItem -Force
+
+# Crear carpeta y entrar
+New-Item -ItemType Directory -Name pruebas; Set-Location pruebas
+
+# Crear un archivo con texto
+"h ola" | Set-Content notas.txt
+
+# Buscar líneas con 'hola'
+Select-String -Pattern 'hola' -Path .\notas.txt
+
+
+Tip: En PowerShell muchos comandos largos tienen alias cortos:
+ls → Get-ChildItem, cd → Set-Location, pwd → Get-Location.
+
+⚖️ Diferencias clave: Shell (Bash) vs PowerShell
+| Tema                 | Bash (shell clásico) 🐚                  | PowerShell (Microsoft) 🔵                         |                          |                                           |
+| -------------------- | ---------------------------------------- | ------------------------------------------------- | ------------------------ | ----------------------------------------- |
+| Filosofía            | Todo es **texto**                        | Todo son **objetos**                              |                          |                                           |
+| Plataforma típica    | Linux/macOS (y Windows via Git Bash/WSL) | Windows (también en Linux/macOS)                  |                          |                                           |
+| Sintaxis             | Corta y muy usada en servidores          | Verbosa, muy poderosa en Windows                  |                          |                                           |
+| Rutas                | `/home/usuario/`                         | `C:\Usuarios\TuUsuario\` (acepta `/` también)     |                          |                                           |
+| Variables            | `NOMBRE="Andrei"; echo $NOMBRE`          | `$name = "Andrei"; $name`                         |                          |                                           |
+| Variables de entorno | `$HOME`, `$PATH`                         | `$env:USERPROFILE`, `$env:Path`                   |                          |                                           |
+| Pipes                | Texto: \`ls                              | grep .txt\`                                       | Objetos: \`Get-ChildItem | Where-Object {$\_.Name -match '.txt\$'}\` |
+| Scripts              | `.sh` (shebang `#!/usr/bin/env bash`)    | `.ps1` (puede requerir ajustar *ExecutionPolicy*) |                          |                                           |
