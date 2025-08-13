@@ -1,0 +1,47 @@
+WSL significa Windows Subsystem for Linux 🐧💻.
+Es una función de Windows que te permite instalar y usar un sistema operativo Linux dentro de Windows,
+ sin tener que crear una máquina virtual o reiniciar tu computadora.
+
+Básicamente:
+Puedes correr comandos y programas de Linux directamente en Windows.
+Se integra con el sistema de archivos de Windows (puedes acceder a tus carpetas de C: desde Linux y viceversa).
+Es muy usado por programadores y gente de ciberseguridad para tener herramientas de Linux en un PC con Windows.
+
+Versiones
+WSL 1 → más rápido para acceder a archivos en Windows, pero no tiene un núcleo Linux real.
+WSL 2 → usa un kernel Linux real, mejor compatibilidad y rendimiento, recomendado para la mayoría de casos.
+
+¿Cómo instalar WSL en Windows paso a paso?
+Instalar WSL en Windows involucra unos cuantos pasos sencillos, que requieren atención a ciertos detalles importantes:
+
+1️⃣ Abrir PowerShell como Administrador
+Presiona Inicio → escribe powershell → clic derecho → Ejecutar como administrador.
+
+2️⃣ Instalar WSL y una distro (Ubuntu por defecto)
+En la consola de PowerShell escribe:
+wsl --install
+
+Esto hará tres cosas:
+Activará la característica de WSL.
+Instalará WSL 2 como predeterminado.
+Instalará Ubuntu automáticamente.
+
+3️⃣ Reiniciar la PC
+Cuando termine, reinicia tu computadora para que Windows active todo.
+
+4️⃣ Configurar Linux
+Después del reinicio, se abrirá la terminal de Ubuntu/Debian/Kali y te pedirá:
+Un nombre de usuario de Linux.
+Una contraseña (no se verá mientras la escribes, es normal).
+
+5️⃣ Usar WSL
+Desde el Inicio, busca por ejemplo Ubuntu.
+O desde PowerShell / CMD:
+wsl
+
+Comprobar versión de WSL
+wsl --version
+
+
+Guiarse por la guia de: https://learn.microsoft.com/es-es/windows/wsl/install
+
