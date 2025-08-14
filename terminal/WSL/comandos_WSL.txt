@@ -25,6 +25,7 @@ cd .. → Subir una carpeta
 cd / → Ir a la raíz del sistema
 
 mkdir → Crear una carpeta
+mkdir -p ./ruta1/ruta2
 
 touch → Crear archivo vacío
 touch notas.txt
@@ -46,6 +47,7 @@ rm -r proyectos
 
 cp → Copiar archivo
 cp archivo.txt copia.txt
+cp -r carpeta1 carpeta2
 
 mv → Mover o renombrar archivo
 mv copia.txt backup.txt
@@ -71,5 +73,23 @@ df -h
 free -h → Ver uso de memoria RAM
 free -h
 
-exit → Salir de WSL
+exit > Salir de WSL
 exit
+
+less > interfaz interactivo de visualización de archivos
+less archivo1
+
+head, tail > mostrar primeras y ultimas lineas de codigo del archivo
+head -n 20 archivo1
+tail -n 20 archivo1
+
+nl > mostrar el numero de lineas de codigo de un archivo
+nl archivo1
+
+man wc
+comando para texto planos
+
+awk > muestra las columnas de un archivo
+awk '{print $columna}' archivo1 
+
+
