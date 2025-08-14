@@ -1,0 +1,19 @@
+# Todos los archivos .txt en carpeta actual
+ls *.txt
+
+# Cualquier archivo que empiece con "log" y termine en ".log"
+ls log*.log
+
+# Archivos con exactamente 3 letras y extensión .jpg
+ls ???.jpg
+
+# Archivos que empiecen con a, b o c
+ls [abc]*
+
+# Archivos que NO empiecen con a, b o c
+ls [^abc]*
+
+# Archivos que estén en carpeta actual y subcarpetas
+shopt -s globstar
+ls **/*.txt
+

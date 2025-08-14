@@ -1,0 +1,20 @@
+🔹 1. grep → Buscar texto dentro de archivos
+grep examina el contenido de archivos y muestra las líneas que coinciden con un patrón.
+
+grep [opciones] "patrón" archivo
+
+| Opción    | Descripción                            | Ejemplo                               |                    |
+| --------- | -------------------------------------- | ------------------------------------- | ------------------ |
+| `-i`      | Ignora mayúsculas/minúsculas           | `grep -i "error" log.txt`             |                    |
+| `-n`      | Muestra el número de línea             | `grep -n "main" script.py`            |                    |
+| `-r`      | Busca recursivamente en subdirectorios | `grep -r "password" /etc`             |                    |
+| `-v`      | Muestra líneas que **no** coinciden    | `grep -v "INFO" log.txt`              |                    |
+| `--color` | Resalta coincidencias                  | `grep --color "usuario" usuarios.txt` |                    |
+| `-E`      | Usa expresiones regulares extendidas   | \`grep -E "error                      | warning" log.txt\` |
+
+Ejemplos:
+grep "root" /etc/passwd               # Busca la palabra "root"
+grep -i "admin" usuarios.txt          # Ignora mayúsculas
+grep -rn "TODO" .                     # Busca "TODO" en todos los archivos de la carpeta actual
+grep -E "error|warning" log.txt       # Coincide con error o warning
+

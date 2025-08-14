@@ -1,0 +1,37 @@
+Una wildcard (comodín) es un símbolo o conjunto de símbolos que se usa para representar uno o varios caracteres desconocidos en un patrón de búsqueda o coincidencia.
+
+Piensa en ellas como “letras comodín” que le dicen a un programa: “aquí puede ir cualquier cosa que encaje con este patrón”.
+
+🔹 Ejemplos comunes
+1. En la terminal (Linux, Git Bash, etc.)
+* → Representa cualquier número de caracteres (incluso cero).
+? → Representa exactamente un carácter.
+
+ls *.txt     # muestra todos los archivos que terminan en .txt
+ls a?.txt    # muestra archivos como a1.txt, ab.txt (solo 1 carácter entre 'a' y '.txt')
+
+2. En .gitignore
+Sirven para ignorar patrones de archivos:
+*.swp   # ignora cualquier archivo que termine en .swp
+WSL/*   # ignora todo dentro de la carpeta WSL
+
+3. En expresiones regulares (Regex)
+En Regex no se llaman “wildcards” como tal, pero el . funciona parecido:
+. → Cualquier carácter individual.
+.* → Cualquier secuencia de caracteres.
+c.t     # coincide con cat, cot, cut
+
+📌 En resumen
+Una wildcard es como decirle al sistema:
+"Aquí puede ir cualquier cosa que coincida con este patrón que te doy".
+
+| Símbolo          | Significado                                                                    | Ejemplo                  | Coincidencias                          |
+| ---------------- | ------------------------------------------------------------------------------ | ------------------------ | -------------------------------------- |
+| `*`              | Cualquier número de caracteres (incluyendo 0)                                  | `ls *.txt`               | `notas.txt`, `hola.txt`, `a.txt`       |
+| `?`              | Exactamente 1 carácter                                                         | `ls a?.txt`              | `a1.txt`, `ab.txt` pero no `abc.txt`   |
+| `[abc]`          | Un solo carácter que sea **a, b o c**                                          | `ls file[123].txt`       | `file1.txt`, `file2.txt`, `file3.txt`  |
+| `[a-z]`          | Un carácter dentro de un rango                                                 | `ls foto[1-5].png`       | `foto1.png`, `foto3.png`               |
+| `[^abc]`         | Un carácter que **NO** sea a, b o c                                            | `ls file[^1].txt`        | `file2.txt`, `file3.txt`               |
+| `{uno,dos,tres}` | Cualquier palabra entre llaves                                                 | `ls {enero,febrero}.txt` | `enero.txt`, `febrero.txt`             |
+| `**`             | Coincide recursivamente en subdirectorios (si `shopt -s globstar` está activo) | `ls **/*.txt`            | Todos los `.txt` en todas las carpetas |
+

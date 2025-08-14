@@ -1,0 +1,30 @@
+🔹 2. find → Buscar archivos y carpetas
+find busca por nombre, tamaño, fecha, permisos, tipo, etc.
+
+Sintaxis
+find [ruta] [condiciones] [acciones]
+
+Opciones útiles:
+| Opción    | Descripción                              | Ejemplo                               |
+| --------- | ---------------------------------------- | ------------------------------------- |
+| `-name`   | Busca por nombre (sensible a mayúsculas) | `find / -name "archivo.txt"`          |
+| `-iname`  | Igual pero sin distinguir mayúsculas     | `find / -iname "archivo.txt"`         |
+| `-type f` | Solo archivos                            | `find . -type f -name "*.log"`        |
+| `-type d` | Solo directorios                         | `find . -type d -name "backup"`       |
+| `-size`   | Busca por tamaño (`+` mayor, `-` menor)  | `find . -size +10M`                   |
+| `-mtime`  | Modificados en los últimos N días        | `find . -mtime -7`                    |
+| `-perm`   | Por permisos                             | `find . -perm 644`                    |
+| `-exec`   | Ejecuta un comando sobre los resultados  | `find . -name "*.log" -exec rm {} \;` |
+
+Ejemplos:
+find / -name "config.txt"            # Buscar config.txt en todo el sistema
+find . -iname "*.jpg"                # Buscar imágenes .jpg sin importar mayúsculas
+find . -type f -size +5M             # Archivos mayores a 5 MB
+find /var/log -type f -mtime -1      # Archivos modificados en las últimas 24 horas
+find . -name "*.tmp" -exec rm {} \;  # Borrar todos los .tmp
+
+🚀 Combinar find + grep para búsquedas avanzadas
+Puedes buscar archivos por nombre y luego texto dentro de ellos:
+find . -type f -name "*.txt" -exec grep -n "ERROR" {} \;
+
+🔍 Busca la palabra "ERROR" dentro de todos los .txt de la carpeta actual.
