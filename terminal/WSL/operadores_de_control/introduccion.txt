@@ -1,0 +1,81 @@
+⚙️ Operadores de control en Linux (para encadenar comandos)
+Cuando trabajas en Bash/Linux, muchas veces no quieres ejecutar solo un comando, sino varios a la vez o dependiendo de lo que pase con el primero. Para eso existen los operadores de control.
+
+🔹 1. Punto y coma ;
+👉 Ejecuta comandos uno tras otro, sin importar si el primero falla o no.
+📌 Ejemplo:
+mkdir carpeta; cd carpeta; echo "Hola" > saludo.txt
+
+🔹 2. AND lógico &&
+👉 Ejecuta el segundo comando solo si el primero tuvo éxito (salida exitosa = código 0).
+📌 Ejemplo:
+mkdir carpeta && cd carpeta
+
+💡 Ideal cuando quieres que algo ocurra solo si lo anterior salió bien.
+
+🔹 3. OR lógico ||
+👉 Ejecuta el segundo comando solo si el primero falla.
+📌 Ejemplo:
+cd carpeta || echo "La carpeta no existe"
+Si existe la carpeta → entra.
+Si NO existe → imprime el mensaje.
+💡 Muy usado como “plan B”.
+
+🔹 4. Combinación && y ||
+👉 Puedes encadenar condiciones tipo “if… else”.
+📌 Ejemplo:
+mkdir carpeta && echo "Carpeta creada" || echo "Error al crear la carpeta"
+Si se crea la carpeta → imprime “Carpeta creada”.
+Si falla → imprime “Error al crear la carpeta”.
+
+🔹 5. Ampersand &
+👉 Ejecuta un comando en segundo plano, para que no bloquee la terminal.
+📌 Ejemplo:
+firefox &
+
+Abre Firefox en segundo plano
+Y te devuelve la terminal para seguir escribiendo comandos.
+
+🔹 6. Doble ampersand && vs punto y coma ;
+; → corre TODO, sin importar errores.
+&& → corre el siguiente SOLO si el anterior fue exitoso.
+📌 Ejemplo comparativo:
+false; echo "Esto se ejecuta"
+false && echo "Esto NO se ejecuta"
+
+🔹 7. Pipe |
+👉 Pasa la salida de un comando como entrada de otro.
+📌 Ejemplo:
+ls -la | grep ".txt"
+ls -la → lista archivos
+grep ".txt" → filtra solo los que contengan .txt
+💡 Los pipes son la magia de Bash: puedes encadenar herramientas pequeñas para hacer cosas poderosas.
+
+🔹 8. Pipe con errores |&
+👉 Envía también los errores (stderr) al siguiente comando.
+📌 Ejemplo:
+ls carpeta_inexistente |& grep "No such"
+
+🚀 Ejemplo completo (usando todo)
+mkdir logs && cd logs; touch acceso.log error.log && ls | grep ".log" || echo "No se pudo crear"
+Explicación paso a paso:
+
+mkdir logs && cd logs → si se crea la carpeta, entra.
+
+; → sigue ejecutando lo que venga.
+
+touch acceso.log error.log → crea 2 archivos.
+
+&& ls | grep ".log" → si lo anterior funcionó, lista solo archivos .log.
+
+|| echo "No se pudo crear" → si algo falla, muestra mensaje de error.
+
+
+📌 Resumen visual con emojis:
+; → haz TODO 😅
+&& → hazlo SOLO si lo anterior salió bien ✅
+|| → hazlo SOLO si lo anterior falló ❌
+& → ejecuta en segundo plano 🔄
+| → conecta salida ➡️ entrada 🔗
+|& → conecta salida + errores ➡️ entrada ⚠️
+
