@@ -1,0 +1,40 @@
+🏷️ ¿Qué es un alias?
+Un alias es como un apodo o atajo para un comando en la terminal.
+En vez de escribir un comando largo y difícil, puedes darle un nombre corto.
+El alias traduce tu apodo → al comando real.
+
+📌 Analogia:
+Llamar al amigo “José” → “Pepe”.
+La terminal entiende “Pepe” = “José”.
+
+🐧 Alias en Linux (Bash/Zsh)
+Ver tus alias actuales:
+alias
+
+Crear un alias temporal:
+alias ll='ls -la'
+Ahora cuando escribas ll, en realidad ejecuta ls -la.
+
+Alias para varios comandos:
+alias limpiar='clear && echo "Terminal limpia 🚀"'
+Escribes limpiar
+Se ejecuta clear (borra pantalla) y luego muestra el mensaje.
+
+Quitar un alias:
+unalias ll
+
+Alias permanente (que no se borre al cerrar terminal):
+Edita el archivo de configuración:
+nano ~/.bashrc
+o si usas Zsh:
+nano ~/.zshrc
+
+Agrega tu alias, ejemplo:
+alias ll='ls -la'
+alias gs='git status'
+
+Guarda y aplica:
+source ~/.bashrc
+(o source ~/.zshrc en Zsh).
+
+
