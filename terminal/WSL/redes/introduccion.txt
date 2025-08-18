@@ -1,0 +1,60 @@
+Los comandos de red en Linux sirven para verificar si tu PC tiene conexión, si puede llegar a otros equipos, y diagnosticar problemas de red. Te paso los más importantes, con explicación y ejemplo:
+
+🔹 1. ping:
+👉 Sirve para comprobar si un dispositivo o sitio responde.
+Envía “paquetes ICMP” y mide el tiempo de respuesta.
+ping 8.8.8.8
+📌 Esto prueba conexión con el DNS público de Google.
+Si ves time=XX ms, la red funciona. Si dice timeout → no hay conexión.
+
+🔹 2. ip a
+👉 Muestra tus direcciones IP (internas, públicas en algunos casos) y las interfaces de red.
+ip a
+📌 Busca algo como inet 192.168.1.34/24 → esa es tu IP local en tu WiFi o cable.
+
+🔹 3. traceroute:
+👉 Muestra por dónde pasan los paquetes hasta llegar a un destino.
+Te enseña el “camino” por los routers de internet.
+traceroute google.com
+📌 Verás una lista de saltos (routers intermedios). Útil para detectar dónde se corta la conexión.
+
+🔹 4. ss -tulnp
+👉 Lista puertos abiertos en tu PC y qué programas los usan.
+Sirve para ver si un servicio está corriendo.
+ss -tulnp
+📌 Ejemplo de salida:
+LISTEN  0   80   127.0.0.1:3306   *:*   users:(("mysqld",pid=1234))
+Eso significa que MySQL está escuchando en el puerto 3306.
+
+🔹 5. curl
+👉 Sirve para probar si un sitio web responde (descarga el contenido).
+curl https://example.com
+📌 Verás el HTML crudo de la página. Si devuelve error 404 o 500 → el servidor no funciona bien.
+
+🔹 6. dig
+👉 Hace consultas DNS (traduce nombres a IPs).
+dig google.com
+📌 Verás algo como:
+google.com.  30  IN  A  142.250.190.78
+Eso significa que google.com tiene esa IP.
+
+🔹 7. arp -a
+👉 Muestra qué equipos están conectados en tu red local.
+arp -a
+📌 Verás direcciones IP y MAC address de dispositivos (ejemplo: tu celular, smart TV, etc.).
+
+⚡ Resumen sencillo:
+
+ping → ¿Responde?
+
+ip a → ¿Cuál es mi IP?
+
+traceroute → ¿Por dónde pasa la conexión?
+
+ss -tulnp → ¿Qué puertos están abiertos?
+
+curl → ¿Responde la web?
+
+dig → ¿Qué IP tiene el dominio?
+
+arp -a → ¿Quién está en mi red?

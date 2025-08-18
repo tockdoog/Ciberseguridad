@@ -36,6 +36,12 @@ firefox &
 Abre Firefox en segundo plano
 Y te devuelve la terminal para seguir escribiendo comandos.
 
+Para ver lo que está en segundo planto puedes usar:
+jobs
+fg % ID[#]+ 
+fg %1
+bg %1
+
 🔹 6. Doble ampersand && vs punto y coma ;
 ; → corre TODO, sin importar errores.
 && → corre el siguiente SOLO si el anterior fue exitoso.
@@ -55,7 +61,7 @@ grep ".txt" → filtra solo los que contengan .txt
 👉 Envía también los errores (stderr) al siguiente comando.
 📌 Ejemplo:
 ls carpeta_inexistente |& grep "No such"
-
+Procesos en foreground y background en la terminal
 🚀 Ejemplo completo (usando todo)
 mkdir logs && cd logs; touch acceso.log error.log && ls | grep ".log" || echo "No se pudo crear"
 Explicación paso a paso:

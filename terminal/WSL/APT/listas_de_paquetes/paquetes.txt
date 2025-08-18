@@ -28,4 +28,4 @@ Estos te sirven para empezar en pentesting, análisis de red y forense digital.
 | **dmidecode**         | Información de BIOS, CPU, RAM y motherboard.                          |
 | **iotop**             | Ver qué procesos están usando el disco duro.                          |
 | **iftop**             | Monitoreo de tráfico de red en tiempo real.                           |
-
+ **tmux**               | Para duplicar las terminales
