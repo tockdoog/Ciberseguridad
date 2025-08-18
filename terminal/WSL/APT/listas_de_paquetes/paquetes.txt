@@ -1,0 +1,31 @@
+🔒 1. Paquetes de ciberseguridad para principiantes
+Estos te sirven para empezar en pentesting, análisis de red y forense digital.
+
+| Paquete                    | Para qué sirve                                                       |
+| -------------------------- | -------------------------------------------------------------------- |
+| **nmap**                   | Escáner de red y puertos. Descubre dispositivos y servicios activos. |
+| **wireshark**              | Analizador de tráfico en tiempo real (sniffer).                      |
+| **aircrack-ng**            | Herramientas para auditoría de redes WiFi.                           |
+| **hydra**                  | Ataques de fuerza bruta a servicios (SSH, FTP, etc.).                |
+| **john** (John the Ripper) | Crackeo de contraseñas (hashes, diccionarios, fuerza bruta).         |
+| **sqlmap**                 | Automatiza ataques de inyección SQL en sitios web.                   |
+| **metasploit-framework**   | Plataforma para explotación de vulnerabilidades.                     |
+| **ettercap**               | Ataques MITM (Man-In-The-Middle) en redes locales.                   |
+| **tcpdump**                | Captura de paquetes desde la terminal (alternativa a Wireshark).     |
+| **nikto**                  | Escáner de vulnerabilidades en servidores web.                       |
+
+
+📌 Con solo estos ya puedes practicar red, web y contraseñas, las áreas más comunes para comenzar.
+
+🖥️ 2. Paquetes para ver estado de tu PC
+| Paquete               | Para qué sirve                                                        |
+| --------------------- | --------------------------------------------------------------------- |
+| **neofetch**          | Muestra info estética de tu sistema (distro, kernel, RAM, GPU, etc.). |
+| **htop**              | Monitor de procesos en tiempo real (como un "Task Manager").          |
+| **glances**           | Monitor avanzado de sistema (CPU, RAM, red, discos).                  |
+| **inxi**              | Información detallada de hardware y software.                         |
+| **lsusb** / **lspci** | Listar dispositivos conectados (USB, PCI).                            |
+| **dmidecode**         | Información de BIOS, CPU, RAM y motherboard.                          |
+| **iotop**             | Ver qué procesos están usando el disco duro.                          |
+| **iftop**             | Monitoreo de tráfico de red en tiempo real.                           |
+

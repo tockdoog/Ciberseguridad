@@ -1,0 +1,69 @@
+📂 ¿Qué son los permisos en Linux?
+En Linux, cada archivo y directorio tiene permisos que controlan quién puede leer, modificar o ejecutar ese recurso.
+👉 Esto es clave en ciberseguridad, porque permite proteger información sensible.
+
+👥 Tipos de usuarios
+Cada archivo/directorio reconoce 3 “roles” de usuario:
+Propietario (owner) 👤 → El usuario que creó el archivo.
+Grupo (group) 👥 → Un conjunto de usuarios que comparten permisos.
+Otros (others) 🌍 → Todos los demás usuarios del sistema.
+
+🔑 Tipos de permisos
+Existen 3 permisos básicos:
+r (read) 📖 → Permite leer el contenido de un archivo o listar un directorio.
+w (write) ✏️ → Permite modificar el archivo o agregar/eliminar cosas en un directorio.
+x (execute) 🚀 → Permite ejecutar el archivo (si es un programa/script) o entrar a un directorio.
+
+👀 Ver permisos con ls -l
+Ejemplo:
+ls -l
+
+Salida posible:
+-rwxr-xr--  1 tockdoog users 1234 Aug 18  archivo.sh
+
+Se lee así:
+- → Es un archivo regular (d sería directorio).
+rwx → Permisos del propietario (read, write, execute).
+r-x → Permisos del grupo (read, execute).
+r-- → Permisos para otros (solo lectura).
+
+En este ejemplo:
+📂 archivo.sh → El dueño puede leer, modificar y ejecutar. El grupo solo puede leer y ejecutar. Los demás solo pueden leer.
+
+🔧 Cambiar permisos con chmod
+Dar permisos de ejecución al propietario:
+chmod u+x archivo.sh
+
+Quitar escritura al grupo:
+chmod g-w archivo.sh
+
+Dar lectura a todos:
+chmod a+r archivo.sh
+
+👉 También puedes usar modo numérico:
+r = 4, w = 2, x = 1
+Se suman:
+7 = rwx
+6 = rw-
+5 = r-x
+4 = r--
+
+Ejemplo:
+chmod 755 archivo.sh
+Significa:
+Propietario: rwx (7)
+Grupo: r-x (5)
+Otros: r-x (5)
+
+👑 Cambiar propietario y grupo
+Cambiar propietario:
+sudo chown usuario archivo.sh
+Cambiar grupo:
+sudo chgrp grupo archivo.sh
+
+
+⚡ En resumen:
+ls -l → ver permisos.
+chmod → cambiar permisos.
+chown / chgrp → cambiar propietario y grupo.
+

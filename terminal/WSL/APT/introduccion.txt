@@ -1,0 +1,54 @@
+📦 ¿Qué es APT?
+👉 APT (Advanced Package Tool) es un gestor de paquetes en distribuciones basadas en Debian (como Ubuntu y Kali Linux).
+Con él puedes instalar, actualizar, eliminar y buscar software desde la terminal.
+
+En lugar de ir a una página web, descargar un .exe o .zip como en Windows, en Linux usas APT para traer los programas directamente desde repositorios oficiales 🔒.
+
+🚦 Flujo recomendado
+Cada vez que llegues a un nuevo Linux:
+Actualizar repositorios:
+sudo apt update
+
+Actualizar programas:
+sudo apt upgrade
+
+Instalar herramientas necesarias:
+sudo apt install nmap wireshark metasploit-framework
+
+⚡ Comandos básicos de APT
+🔍 1. Buscar un paquete
+apt search nombre_paquete
+Ejemplo:
+apt search nmap
+➡️ Muestra información sobre el programa nmap.
+
+📥 2. Instalar un paquete
+sudo apt install nombre_paquete
+Ejemplo:
+sudo apt install nmap
+➡️ Descarga e instala nmap.
+
+♻️ 3. Actualizar la lista de paquetes
+sudo apt update
+➡️ Refresca la información de los repositorios para que APT sepa qué versiones hay disponibles.
+
+⬆️ 4. Actualizar los programas instalados
+sudo apt upgrade
+➡️ Actualiza los programas a su última versión estable.
+
+❌ 5. Eliminar un paquete
+sudo apt remove nombre_paquete
+Ejemplo:
+sudo apt remove nmap
+➡️ Desinstala nmap pero deja archivos de configuración.
+
+Si quieres quitar todo, incluyendo configuraciones:
+sudo apt purge nombre_paquete
+
+🧹 6. Limpiar paquetes no usados
+sudo apt autoremove
+➡️ Elimina dependencias que ya no se usan (muy útil para ahorrar espacio).
+
+
+👉 En resumen: APT es como la Play Store pero en la terminal 📲.
+Te da acceso rápido y seguro a miles de programas sin buscarlos en internet.
