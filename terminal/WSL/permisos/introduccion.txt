@@ -55,6 +55,35 @@ Propietario: rwx (7)
 Grupo: r-x (5)
 Otros: r-x (5)
 
+🔹 1. Notación numérica (octal)
+Es la más rápida y usada. Cada permiso se representa con un número
+4 = r (read → leer)
+2 = w (write → escribir)
+1 = x (execute → ejecutar)
+Se suman para dar permisos:
+7 = 4+2+1 = rwx
+6 = 4+2 = rw-
+5 = 4+1 = r-x
+4 = 4 = r--
+0 = sin permisos
+
+Y los números se ponen en este orden:
+[dueño] [grupo] [otros]
+
+ls -ld carpeta o archivo
+
+| **Permiso numérico** | **Equivalente en letras (`chmod`)** | **Resultado (ls -l)** | **Explicación**                                |
+| -------------------- | ----------------------------------- | --------------------- | ---------------------------------------------- |
+| `chmod 777 archivo`  | `chmod u=rwx,g=rwx,o=rwx archivo`   | `-rwxrwxrwx`          | Todos pueden leer, escribir y ejecutar         |
+| `chmod 755 archivo`  | `chmod u=rwx,g=rx,o=rx archivo`     | `-rwxr-xr-x`          | Usuario todo, grupo y otros solo leer/ejecutar |
+| `chmod 700 archivo`  | `chmod u=rwx,g=,o= archivo`         | `-rwx------`          | Solo el usuario tiene acceso total             |
+| `chmod 644 archivo`  | `chmod u=rw,g=r,o=r archivo`        | `-rw-r--r--`          | Usuario lee/escribe, grupo y otros solo leen   |
+| `chmod 600 archivo`  | `chmod u=rw,g=,o= archivo`          | `-rw-------`          | Solo el usuario puede leer y escribir          |
+| `chmod 400 archivo`  | `chmod u=r,g=,o= archivo`           | `-r--------`          | Solo el usuario puede leer                     |
+| `chmod 444 archivo`  | `chmod a=r archivo`                 | `-r--r--r--`          | Todos solo pueden leer                         |
+| `chmod 111 archivo`  | `chmod a=x archivo`                 | `--x--x--x`           | Todos solo pueden ejecutar                     |
+
+
 👑 Cambiar propietario y grupo
 Cambiar propietario:
 sudo chown usuario archivo.sh
