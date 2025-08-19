@@ -1,0 +1,11 @@
+3. Ciberinteligencia 🔎
+
+Es como ser detective digital:
+
+Buscar amenazas antes de que hagan daño. 🐛
+
+Detectar espionaje o personas que quieren robar información. 🕵️‍♀️
+
+Usar información de internet para predecir ataques. 🌐
+
+Herramientas: SIEM, IDS/IPS, OSINT. Son programas que ayudan a vigilar la red y detectar problemas. 🖥️

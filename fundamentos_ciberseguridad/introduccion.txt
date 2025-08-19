@@ -1,0 +1,27 @@
+Ciberseguridad 🛡️💻
+
+La ciberseguridad es como ponerle cerraduras, alarmas y guardias a tus computadoras, celulares, redes e información para protegerlos de personas malas (hackers) que quieren robar, cambiar o destruir tus datos.
+
+En otras palabras:
+
+Es proteger tus datos y sistemas de ataques digitales.
+
+Asegura que la información sea confidencial, correcta y disponible cuando la necesites.
+
+Ejemplos de por qué es importante:
+
+Evitar que alguien robe tus contraseñas 🔑
+
+Proteger tu información bancaria 💳
+
+Evitar que tus fotos o documentos sean borrados o alterados 🖼️📂
+
+Proteger empresas y gobiernos de ataques que pueden causar grandes daños 🏢⚠️
+
+Principios básicos de la ciberseguridad:
+
+🔒 Confidencialidad: Que solo tú y quien tenga permiso vea la información.
+
+✍️ Integridad: Que nadie pueda modificar tus datos sin autorización.
+
+⏱️ Disponibilidad: Que los sistemas y datos siempre estén accesibles.
