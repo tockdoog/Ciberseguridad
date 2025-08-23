@@ -1,0 +1,107 @@
+🔐 ¿Qué es la Criptografía en Ciberseguridad?
+La criptografía es la rama de la seguridad informática que estudia y aplica técnicas matemáticas para proteger la información.
+En pocas palabras: convierte datos legibles en datos ilegibles (cifrados) para que solo personas autorizadas puedan acceder a ellos.
+
+👉 Ejemplo cotidiano: cuando entras a un sitio web con HTTPS, tu comunicación con el servidor está protegida con criptografía.
+
+🎯 ¿Para qué sirve?
+En ciberseguridad la criptografía busca garantizar cuatro pilares fundamentales (conocidos como CIA + A):
+
+Confidencialidad → Solo el destinatario puede leer el mensaje (evita espías).
+
+Integridad → Asegura que el mensaje no se modificó en el camino.
+
+Autenticación → Verifica la identidad de las partes (ej: certificados digitales).
+
+No repudio → Una persona no puede negar que envió un mensaje (ej: firmas digitales).
+
+🧩 Conceptos básicos en Criptografía (explicados a fondo)
+1. Cifrado y Descifrado:
+Cifrado: proceso de transformar un mensaje legible (texto plano) en ilegible (texto cifrado) usando un algoritmo y una clave.
+Descifrado: proceso inverso para recuperar el mensaje original.
+🔑 Idea clave: sin la clave correcta, el mensaje no se puede leer (o debe ser muy costoso de romper con ataques).
+
+Ejemplo real: cuando usas WhatsApp, tus mensajes son cifrados con AES antes de enviarse.
+
+2. Clave (Key)
+La clave es el ingrediente secreto que hace único al cifrado.
+Clave simétrica → una sola clave para cifrar y descifrar (ej: AES, DES).
+Clave asimétrica → dos claves distintas pero relacionadas matemáticamente:
+Clave pública → cualquiera puede usarla para cifrar.
+Clave privada → solo el dueño puede usarla para descifrar.
+👉 Seguridad: si alguien roba la clave privada, la confidencialidad se pierde.
+
+3. Texto Plano y Texto Cifrado
+Texto plano (plaintext) → Mensaje original legible. Ej: “Hola Jorge”.
+Texto cifrado (ciphertext) → Mensaje convertido en algo ilegible. Ej: “93k#1!z0*”.
+⚡ Importante: el texto cifrado debe parecer aleatorio, sin patrones reconocibles.
+
+4. Algoritmos Criptográficos
+Son las “recetas matemáticas” que definen cómo se hace el cifrado/descifrado.
+Tipos principales:
+Simétricos → rápidos, usados para cifrar datos masivos (AES, ChaCha20).
+Asimétricos → más lentos, usados en intercambio de claves y firmas (RSA, ECC).
+Hashing → funciones unidireccionales (SHA-256, bcrypt).
+
+5. Hashing
+El hashing no es cifrado, es una transformación irreversible.
+Convierte datos de cualquier tamaño en un valor fijo (huella digital).
+Siempre produce el mismo resultado con la misma entrada.
+Ejemplo:
+Texto: password123
+Hash SHA-256: ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f
+👉 Usos en ciberseguridad:
+Guardar contraseñas en bases de datos.
+Comprobar integridad de archivos (checksums).
+
+6. Firmas Digitales
+Son el equivalente criptográfico de una firma manuscrita.
+Se generan usando hash + clave privada.
+Sirven para verificar quién envió el mensaje y que no fue alterado.
+👉 Ejemplo real: cuando descargas un software, muchas veces viene con una firma digital que puedes verificar.
+
+7. Criptografía Simétrica
+Una sola clave para cifrar y descifrar.
+Rápida y eficiente.
+Problema: ¿cómo compartes la clave de forma segura?
+Ejemplos:
+AES (Advanced Encryption Standard).
+DES (obsoleto por inseguro).
+👉 Usos: cifrado de discos, VPNs, Wi-Fi (WPA2).
+
+8. Criptografía Asimétrica
+Usa dos claves distintas:
+Pública → para cifrar o verificar firmas.
+Privada → para descifrar o firmar.
+Más lenta que la simétrica.
+Ejemplos:
+RSA (basado en factorización de primos grandes).
+ECC (Elliptic Curve Cryptography), más moderna y eficiente.
+👉 Usos: certificados SSL/TLS, correos seguros (PGP), autenticación.
+
+9. Intercambio de Claves (Diffie-Hellman)
+Problema: si usamos criptografía simétrica, ¿cómo compartimos la clave secreta sin que alguien la robe?
+👉 Diffie-Hellman permite que dos personas creen una clave compartida a través de un canal inseguro, sin que nadie más pueda calcularla.
+Esto es posible gracias a la aritmética modular y las propiedades de los números primos.
+Ejemplo real: es parte del protocolo HTTPS para que tu navegador y el servidor web acuerden una clave secreta.
+
+10. Certificados Digitales
+Documentos electrónicos que validan la identidad de una persona, empresa o servidor.
+Usan criptografía asimétrica y están firmados por una Autoridad de Certificación (CA).
+👉 Ejemplo: cuando entras a un sitio con candado verde 🔒 (HTTPS), estás viendo un certificado digital válido.
+
+
+🚦 Resumen Visual
+
+Cifrado: oculta el contenido.
+
+Hashing: asegura integridad (no reversible).
+
+Firmas digitales: aseguran autenticidad.
+
+Simétrico: rápido pero requiere compartir clave.
+
+Asimétrico: más seguro para intercambio de claves.
+
+Certificados: validan identidades en internet.
+
