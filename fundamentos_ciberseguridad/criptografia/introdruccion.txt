@@ -1,0 +1,38 @@
+🔐 Introducción a la Criptografía en Ciberseguridad
+La criptografía es una rama de la ciberseguridad que se encarga de proteger la confidencialidad, integridad y autenticidad de la información mediante técnicas matemáticas.
+Su objetivo principal es transformar la información en un formato ilegible para quienes no tengan permiso de acceder a ella, garantizando que solo las personas autorizadas puedan leer, modificar o verificar esos datos.
+
+En la vida diaria, la criptografía está en casi todo lo que hacemos en Internet:
+🔑 Contraseñas guardadas en sistemas.
+📧 Correos electrónicos cifrados.
+💳 Pagos en línea (tarjetas, PayPal, criptomonedas).
+🌐 Conexiones seguras HTTPS.
+
+🕵️ Esteganografía vs Criptografía
+Aunque suelen confundirse, no son lo mismo:
+| Concepto       | Criptografía 🔐                                                                  | Esteganografía 🖼️                                                           |
+| -------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Definición** | Ciencia de proteger la información mediante transformación matemática (cifrado). | Técnica de **ocultar la existencia** de la información dentro de otro medio. |
+| **Objetivo**   | Que nadie pueda entender el mensaje sin la clave.                                | Que nadie se dé cuenta de que existe un mensaje oculto.                      |
+| **Ejemplo**    | Mensaje: “HOLA” → Texto cifrado: “XQ9@#Z”.                                       | Esconder “HOLA” dentro de una imagen, audio o video sin que se note.         |
+| **Uso común**  | Seguridad de datos, transacciones, autenticación.                                | Espionaje, comunicación secreta, marca de agua digital.                      |
+| **Detección**  | Fácil saber que el mensaje está cifrado (aunque no se entienda).                 | Difícil detectar que hay un mensaje, parece contenido normal.                |
+
+👉 En resumen:
+
+Criptografía = Proteger el contenido.
+
+Esteganografía = Proteger la existencia del mensaje.
+
+
+📊 ¿Qué matemáticas repasar?
+
+La criptografía usa bastante matemáticas, pero si estás empezando te recomiendo repasar estas bases:
+
+📐 Álgebra modular (aritmética con restos, muy usada en RSA y ECC).
+
+📊 Teoría de números (primos, factorización).
+
+🔄 Funciones matemáticas (permutaciones, logaritmos discretos).
+
+🔢 Probabilidad y combinatoria (en generación de claves y análisis de fuerza bruta).

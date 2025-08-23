@@ -1,0 +1,83 @@
+🔐 Glosario de Criptografía en Ciberseguridad
+
+🧮 Algoritmo criptográfico
+Conjunto de reglas matemáticas usadas para cifrar o descifrar información (ej: AES, RSA).
+
+➗ Aritmética modular
+Sistema matemático donde los cálculos se hacen con restos. Ejemplo: 
+17
+m
+o
+d
+ 
+ 
+5
+=
+2
+17mod5=2. Fundamental en RSA y Diffie-Hellman.
+
+🗝️ Ataque de fuerza bruta
+Intento de descifrar un mensaje probando todas las combinaciones posibles de claves.
+
+✅ Autenticación
+Proceso de verificar que alguien o algo es quien dice ser.
+
+🏢 Autoridad de Certificación (CA)
+Entidad que emite certificados digitales para garantizar la identidad de sitios web, empresas o usuarios.
+
+🔒 Cifrado (Encryption)
+Proceso de convertir información legible (texto plano) en ilegible (texto cifrado).
+
+🔤 Cifrado César
+Método clásico que desplaza letras un número fijo de posiciones en el alfabeto.
+
+🔑 Clave (Key)
+Dato secreto usado en un algoritmo criptográfico para cifrar o descifrar.
+
+🔐 Clave privada
+Parte secreta en la criptografía asimétrica, usada para descifrar datos o crear firmas digitales.
+
+🌐 Clave pública
+Parte visible en la criptografía asimétrica, usada para cifrar datos o verificar firmas.
+
+🙈 Confidencialidad
+Garantía de que solo las partes autorizadas pueden acceder a la información.
+
+⚖️ Criptografía asimétrica
+Usa un par de claves (pública y privada). Ej: RSA, ECC.
+
+🌀 Criptografía simétrica
+Usa la misma clave para cifrar y descifrar. Ej: AES.
+
+📖 Criptoanálisis
+Técnicas para romper sistemas criptográficos sin conocer las claves.
+
+📜 Texto cifrado (Ciphertext)
+Mensaje ilegible resultante de aplicar un algoritmo de cifrado.
+
+🤝 Diffie-Hellman
+Protocolo para intercambiar claves de forma segura en un canal inseguro.
+
+✍️ Firma digital
+Garantiza autenticidad e integridad de un mensaje usando criptografía asimétrica.
+
+🧩 Hash / Función hash
+Convierte un dato en una huella digital única e irreversible. Ej: SHA-256.
+
+🛡️ Integridad
+Asegura que los datos no han sido alterados.
+
+🙅 No repudio
+El emisor no puede negar haber enviado un mensaje.
+
+📄 Texto plano (Plaintext)
+Mensaje legible antes del cifrado.
+
+🧂 Salt
+Valor aleatorio agregado a contraseñas antes de aplicar un hash, para dificultar ataques.
+
+🌍 SSL/TLS
+Protocolos que protegen la comunicación en internet (ej: HTTPS).
+
+🎲 Vector de Inicialización (IV)
+Dato extra en algunos cifrados para evitar patrones repetidos.
