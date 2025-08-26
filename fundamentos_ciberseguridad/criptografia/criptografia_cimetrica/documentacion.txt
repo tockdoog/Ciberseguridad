@@ -1,0 +1,77 @@
+🔐 ¿Qué es el Cifrado Simétrico?
+
+Es un tipo de criptografía donde la misma clave se usa para cifrar y descifrar la información.
+
+Ventaja: es rápido y eficiente.
+
+Desventaja: requiere un método seguro para compartir la clave.
+
+👉 Ejemplo: AES, DES, 3DES, RC4.  
+
+
+🔑 Idea básica: Cifrado Simétrico
+
+Imagina que tienes un candado con una sola llave.
+
+Si quieres guardar algo → lo cierras con el candado (cifrar).
+
+Si quieres sacarlo → usas la misma llave para abrirlo (descifrar).
+
+👉 Eso es cifrado simétrico: la misma clave sirve para cifrar y descifrar.
+
+
+
+🛠️ Ejemplos de modos de operación (explicados fácil)
+
+ECB (Electronic Codebook)
+
+Cierra cada cajita por separado, sin relación con la anterior.
+
+Problema: si dos cajitas tienen el mismo contenido, el candado las deja igual. Un espía puede ver patrones.
+
+Ejemplo: mandar varias cajas que dicen "PAN PAN PAN", el espía sabe que todas son iguales.
+
+CBC (Cipher Block Chaining)
+
+Antes de cerrar cada cajita, se mezcla con la anterior.
+
+Resultado: aunque dos cajas tengan lo mismo, el candado las hará diferentes.
+
+Mucho más seguro.
+
+CTR (Counter Mode)
+
+En lugar de cajas, imagina que cada cajita recibe un número consecutivo (1, 2, 3…).
+
+Usas esos números junto con el candado para cifrar.
+
+Ventaja: muy rápido y perfecto para internet.
+
+Cifrado en flujo (stream cipher)
+
+En vez de cajitas, imagina que tu mensaje es como agua que pasa por una manguera.
+
+El candado va cerrando gota por gota, en tiempo real.
+
+Ejemplo: llamadas o transmisiones en vivo.
+
+
+
+🎯 ¿Para qué sirve?
+
+Proteger confidencialidad de la información (archivos, mensajes, datos en la nube).
+
+Transmisión segura en redes (VPNs, HTTPS, Wi-Fi con WPA2/WPA3).
+
+Cifrado en discos duros o memorias USB.
+
+Cifrado en aplicaciones bancarias y de mensajería.
+
+
+📌 Definición simple
+
+Un cipher = conjunto de reglas matemáticas que dicen:
+
+Cómo cifrar (convertir texto claro en texto secreto).
+
+Cómo descifrar (recuperar el texto original a partir del texto secreto).
