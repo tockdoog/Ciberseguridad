@@ -1,0 +1,11 @@
+🤖 13. Seguridad en el Uso de Herramientas de Inteligencia Artificial
+
+Riesgo: Compartir datos confidenciales en chats de IA.
+
+Buenas prácticas:
+
+Nunca enviar contraseñas, datos bancarios o información sensible.
+
+Revisar términos de uso de la herramienta.
+
+Usar IA solo como apoyo, validar resultados.

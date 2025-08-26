@@ -1,0 +1,29 @@
+🔐 1. Configura Authy para Autenticación de Dos Factores Segura
+
+Qué es la 2FA (Two-Factor Authentication): Añade un segundo nivel de verificación, además de la contraseña. Aunque un atacante robe tu contraseña, no podrá acceder sin el código temporal.
+
+Cómo funciona Authy:
+
+Genera códigos TOTP (Time-based One-Time Passwords), válidos solo por 30 segundos.
+
+Permite tener copias en la nube cifradas (si cambias de celular no pierdes acceso).
+
+Funciona sin conexión a internet, a diferencia de los SMS.
+
+Configuración:
+
+Descarga Authy en el celular o PC.
+
+Registra tu número con verificación.
+
+Escanea el código QR que ofrecen tus servicios (ej. Gmail, Facebook, GitHub).
+
+Guarda las copias de respaldo en un lugar seguro.
+
+Buenas prácticas:
+
+Nunca uses solo SMS, ya que son vulnerables al SIM swapping.
+
+Usa Authy o Google Authenticator, pero Authy tiene la ventaja del backup.
+
+Activa en tus cuentas críticas: correo, redes sociales, bancos, gestor de contraseñas.

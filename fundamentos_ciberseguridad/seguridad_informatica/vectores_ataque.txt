@@ -1,0 +1,18 @@
+5. Vectores de ataque y pruebas de seguridad ⚔️
+Vectores de ataque: formas en que los hackers atacan
+
+🦠 Malware: Virus o ransomware.
+
+🎣 Phishing: Correos falsos para robar contraseñas.
+
+🌐 Ataques de red: DDoS o interceptar información.
+
+💻 Exploits: Fallas en software que los hackers usan.
+
+🗣️ Ingeniería social: Engañar a personas para sacar información.
+
+Pruebas de seguridad: Simular ataques para encontrar problemas antes que los hackers. 🕵️‍♂️
+
+Pentesting 🔍
+
+Escaneo de vulnerabilidades 🛠️

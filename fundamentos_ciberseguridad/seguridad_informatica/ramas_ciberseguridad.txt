@@ -1,0 +1,17 @@
+2. Ramas de ciberseguridad 🌐
+
+Son las “áreas de defensa” en la ciberseguridad:
+
+Redes 🖧: Proteger internet, Wi-Fi y conexiones.
+
+Sistemas y apps 💻📱: Evitar que los programas tengan fallas que los hackers puedan usar.
+
+Nube ☁️: Proteger archivos y servicios que están en internet.
+
+Información 📂: Controlar cómo se guarda y usa la información.
+
+Dispositivos móviles 📱: Proteger celulares, tablets y dispositivos IoT.
+
+Ciberinteligencia 🔍: Investigar amenazas y hackers.
+
+Forense digital ♂️: Analizar qué pasó después de un ataque.

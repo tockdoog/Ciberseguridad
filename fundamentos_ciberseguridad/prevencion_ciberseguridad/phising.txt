@@ -1,0 +1,27 @@
+🎣 11. Detección y Prevención de Phishing
+
+Qué es: Técnica de engaño que suplanta entidades legítimas para robar credenciales.
+
+Cómo prevenir:
+
+Revisar remitente real del correo.
+
+Verificar enlaces antes de hacer clic.
+
+Usar filtros antiphishing.
+
+Habilitar 2FA.
+
+Ejemplo: Correos que dicen “Su cuenta será suspendida, haga clic aquí”.
+
+📧 12. Phishing: cómo identificar un correo falso
+
+Señales de alerta:
+
+Dirección del remitente rara (ej: banco@secure-login.xyz).
+
+Mensajes urgentes o amenazas.
+
+Archivos adjuntos extraños (.exe, .zip).
+
+Ortografía pobre o traducciones mal hechas.

@@ -1,0 +1,42 @@
+🔐 ¿Qué es la Generación de Aleatoriedad en Criptografía?
+En criptografía, la aleatoriedad se refiere a la capacidad de generar valores impredecibles (números, claves, bits).
+👉 Se usa para crear secretos que un atacante no pueda adivinar, como contraseñas, claves de cifrado, salts, vectores de inicialización, etc.
+
+🎯 ¿Para qué sirve?
+Claves de cifrado: AES, RSA, ECC necesitan llaves únicas y aleatorias.
+Salts en contraseñas: evitar ataques con rainbow tables.
+Vectores de inicialización (IV): necesarios en modos de cifrado como CBC o CTR.
+Tokens de sesión y autenticación: usados en inicios de sesión, JWT, OAuth.
+Protocolos de seguridad: TLS/SSL, VPNs, firmas digitales.
+
+Sin buena aleatoriedad, toda la seguridad se rompe.
+
+⚙️ Tipos de Generadores
+En informática distinguimos dos grandes familias:
+1. 🎲 Generadores de Números Pseudoaleatorios (PRNG - PseudoRandom Number Generators)
+No son realmente aleatorios, se basan en algoritmos deterministas.
+Usan una semilla (seed) para generar secuencias de números que parecen aleatorios.
+Si conoces la semilla ➝ puedes predecir toda la secuencia.
+Ejemplos de PRNG:
+Linear Congruential Generator (LCG): uno de los más antiguos.
+Mersenne Twister: usado en muchos lenguajes de programación (ej. Python random).
+Xorshift: rápido y usado en simulaciones.
+
+👉 Problema: No son seguros para criptografía. Si un atacante descubre la semilla, puede predecir todo.
+
+2. 🔒 Generadores de Números Pseudoaleatorios Criptográficamente Seguros (CSPRNG - Cryptographically Secure PRNG)
+Son PRNG diseñados para ser impredecibles.
+Aunque el atacante vea parte de la secuencia, no puede calcular el resto.
+Usan algoritmos basados en funciones hash, cifrados de bloque, o entropía del sistema.
+Ejemplos:
+/dev/urandom o /dev/random (Linux).
+CryptGenRandom (Windows).
+Fortuna (diseñado por Bruce Schneier).
+En Python: secrets o os.urandom().
+
+3. 🌌 Generadores de Aleatoriedad Verdadera (TRNG - True Random Number Generators)
+Obtienen aleatoriedad del mundo físico: ruido eléctrico, radiación, fluctuaciones térmicas.
+Se usan en hardware de seguridad (TPM, tarjetas inteligentes, HSM).
+Ejemplo: Intel RDRAND, hardware RNG en chips modernos.
+
+

@@ -1,0 +1,19 @@
+🛡️ 4. Configuración y uso efectivo de antivirus en Windows y Mac
+
+Qué hace un antivirus: Detecta malware (virus, spyware, troyanos, ransomware).
+
+Windows Defender (integrado): Muy sólido, gratuito y actualizado.
+
+Alternativas confiables: Bitdefender, Kaspersky, ESET, Malwarebytes.
+
+En Mac: Aunque menos atacado, existen amenazas. Opciones: Intego, Malwarebytes.
+
+Buenas prácticas:
+
+Programar escaneos automáticos semanales.
+
+Mantener siempre activada la protección en tiempo real.
+
+No instalar dos antivirus a la vez.
+
+Mantener actualizadas las definiciones de virus.

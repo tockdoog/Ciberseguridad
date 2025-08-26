@@ -1,0 +1,15 @@
+💻 6. Cómo validar la licencia de Windows 11
+
+Por qué importa:
+
+Versiones pirata no reciben parches de seguridad.
+
+Pueden traer malware incluido.
+
+Cómo validar:
+
+Configuración → Actualización y seguridad → Activación.
+
+El sistema debe indicar “Windows está activado con una licencia digital”.
+
+Recomendación: Siempre obtener licencias oficiales (Microsoft o partners).

@@ -1,0 +1,21 @@
+🔑 2. Gestión Segura de Contraseñas con Bitwarden
+
+Problema actual: Muchas personas usan contraseñas débiles o las repiten en varios sitios. Ejemplo: 123456, qwerty, o usar la misma en correo y Facebook.
+
+Qué es Bitwarden: Un gestor de contraseñas encriptado que almacena todas tus credenciales en una “bóveda” protegida con una contraseña maestra.
+
+Características:
+
+Generador de contraseñas seguras (ej: aT!9sKp$3LrQ).
+
+Acceso multiplataforma (navegador, móvil, escritorio).
+
+Opción de auto-llenado seguro.
+
+Buenas prácticas:
+
+La contraseña maestra debe ser larga y única (ej: una frase).
+
+Activar 2FA en Bitwarden.
+
+Revisar el “monitor de seguridad” que te alerta si tus contraseñas están en filtraciones.

@@ -1,0 +1,21 @@
+🌐 3. Seguridad en Redes Públicas: Uso de VPN y Precauciones Básicas
+
+Riesgo: WiFi en cafeterías, aeropuertos o centros comerciales puede ser interceptada por atacantes (sniffers o evil twin WiFi).
+
+Cómo protege la VPN:
+
+Cifra el tráfico entre tu dispositivo e internet.
+
+Oculta tu dirección IP real.
+
+Ejemplo de ataque: Un ciberdelincuente crea una red falsa “Free_WiFi_Café” y captura datos de quienes se conectan.
+
+Buenas prácticas:
+
+Usar VPNs confiables (ProtonVPN, NordVPN, ExpressVPN).
+
+No ingresar a bancos o correos en redes abiertas sin VPN.
+
+Preferir datos móviles si no tienes VPN.
+
+Revisar siempre el candado HTTPS en páginas web.

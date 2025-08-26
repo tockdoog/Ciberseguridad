@@ -1,0 +1,11 @@
+⚖️ 10. Principio de Mínimo Privilegio
+
+Definición: Los usuarios y sistemas deben tener solo los permisos estrictamente necesarios.
+
+Ejemplos:
+
+Un empleado de contabilidad no necesita permisos de administrador.
+
+Una aplicación que consulta una base de datos no debe tener permisos para borrar tablas.
+
+Beneficios: Reduce el impacto si una cuenta se ve comprometida.

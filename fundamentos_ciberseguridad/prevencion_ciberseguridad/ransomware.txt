@@ -1,0 +1,23 @@
+🕵️ 5. Prevención y Manejo de Ataques de Ransomware
+
+Qué es: Malware que cifra tus archivos y exige un pago (generalmente en criptomonedas) para liberarlos.
+
+Ejemplos: WannaCry (2017), Ryuk, LockBit.
+
+Prevención:
+
+Backups regulares en dispositivos externos y en la nube (3-2-1 regla).
+
+Desconectar discos externos cuando no se usen.
+
+No abrir archivos sospechosos ni correos de remitentes desconocidos.
+
+Manejo:
+
+Desconectar el equipo de la red inmediatamente.
+
+Avisar al área de TI.
+
+No pagar el rescate (no garantiza recuperación).
+
+Restaurar desde copias de seguridad.
