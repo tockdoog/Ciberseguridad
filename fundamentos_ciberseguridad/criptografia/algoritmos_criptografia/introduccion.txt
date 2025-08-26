@@ -1,0 +1,18 @@
+🔑 ¿Qué son los algoritmos de criptografía clásica?
+
+Los algoritmos de criptografía clásica son métodos antiguos de cifrado que se usaban antes de la era digital para proteger mensajes.
+👉 Básicamente, consisten en transformar un texto claro (mensaje legible) en un texto cifrado (mensaje ilegible) usando reglas matemáticas o de sustitución de letras.
+
+Se basan en álgebra simple, sustitución y transposición de caracteres.
+
+Eran fáciles de aplicar a mano (sin computadoras).
+
+Hoy en día ya no son seguros frente a atacantes modernos, pero son la base teórica de la criptografía moderna.
+
+📌 ¿Para qué sirven?
+
+Historia: proteger mensajes militares, diplomáticos o personales.
+
+Educación: entender cómo funciona la seguridad en la información.
+
+Base teórica: muchos algoritmos modernos evolucionan de estos principios.

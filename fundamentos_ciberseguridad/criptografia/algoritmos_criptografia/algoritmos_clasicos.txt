@@ -1,0 +1,73 @@
+🔠 Algoritmo César:
+El Cifrado César es uno de los más simples y famosos, usado por Julio César 🏛️ para comunicar órdenes a sus generales.
+El cifrado César es un cifrado por sustitución donde cada letra del alfabeto se reemplaza por otra que está un número fijo de posiciones más adelante.
+
+📌 Pasos:
+Escoge una clave (un número entre 1 y 25).
+Desplaza cada letra del mensaje claro tantas posiciones como la clave.Desplaza cada letra del mensaje claro tantas posiciones como la clave.
+Si llegas al final del alfabeto, vuelves al inicio.
+
+🔎 Ejemplo con clave = 3
+Alfabeto normal:
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+Alfabeto cifrado (desplazado 3):
+D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+
+Mensaje claro: HOLA
+Se aumenta la clave con el alfabeto
+
+H → K
+
+O → R
+
+L → O
+
+A → D
+
+Mensaje cifrado: KROD
+👉 Fácil de aplicar, pero también fácil de romper, porque solo hay 25 claves posibles.
+
+
+🔠 Algoritmo Vigenère
+El Cifrado Vigenère es una versión más avanzada que mejora al César.
+Fue considerado "indescifrable" durante siglos (aunque ya no lo es).
+
+Usa una palabra clave.
+
+Aplica un César diferente para cada letra del mensaje.
+
+📌 Pasos:
+
+Escoge una clave (ejemplo: SOL).
+
+Repite la clave hasta cubrir el mensaje.
+
+Convierte letras en números (A=0, B=1, ..., Z=25).
+
+Sumas: (letra mensaje + letra clave) mod 26.
+
+Convierte el número resultante de nuevo en letra.
+
+
+🔎 Ejemplo práctico
+
+Mensaje claro: HOLA
+Clave: SOL
+
+1. Escribimos el mensaje y repetimos la clave
+Mensaje: H   O   L   A
+Clave:   S   O   L   S
+
+Nota: repetimos la clave SOL → como el mensaje tiene 4 letras, la clave se repite como SOLS.
+
+2. Convertimos letras en números (A=0, B=1, …, Z=25)
+H=7   O=14   L=11   A=0
+S=18  O=14   L=11   S=18
+
+3. Sumamos cada posición (mod 26)
+7 + 18 = 25 → Z
+14 + 14 = 28 → 28 mod 26 = 2 → C
+11 + 11 = 22 → W
+0 + 18 = 18 → S
+
