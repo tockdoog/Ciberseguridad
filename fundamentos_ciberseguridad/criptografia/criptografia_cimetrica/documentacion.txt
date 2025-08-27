@@ -74,4 +74,4 @@ Un cipher = conjunto de reglas matemáticas que dicen:
 
 Cómo cifrar (convertir texto claro en texto secreto).
 
-Cómo descifrar (recuperar el texto original a partir del texto secreto).
+Cómo descifrar (recuperar el texto original a partir del texto secreto).c

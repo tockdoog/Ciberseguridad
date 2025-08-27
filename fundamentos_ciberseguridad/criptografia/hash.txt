@@ -1,0 +1,46 @@
+🔐 ¿Qué es una Función de Hash?
+Una función de hash es un algoritmo matemático que transforma una entrada (texto, archivo, contraseña, etc.) en una cadena corta de longitud fija llamada hash o digest.
+
+👉 Ejemplo:
+Si aplicamos un hash a la palabra “Andrei”, podríamos obtener algo como:
+SHA-256("Andrei") = 0a5f6b... (64 caracteres)
+
+No importa si la entrada es pequeña o gigante (un documento de 1 MB o de 100 GB), el hash siempre tiene el mismo tamaño fijo.
+
+Es un proceso unidireccional: no puedes “desencriptar” un hash para recuperar el texto original.
+
+📌 ¿Para qué sirve una función de hash?
+e usa principalmente para:
+
+Integridad de datos 🛡️
+Asegura que un archivo o mensaje no fue alterado.
+Ejemplo: cuando descargas un programa, la página te da el hash; si coincide con el tuyo, el archivo no fue modificado.
+
+Almacenamiento de contraseñas 🔑
+Los sistemas no guardan tu contraseña directamente, guardan su hash.
+
+Si tu contraseña es 123456, el sistema guarda el hash (ej: 8d969eef6ecad3c...)
+
+Así, aunque alguien robe la base de datos, no verá tu clave en texto plano.
+
+Firmas digitales y certificados digitales ✍️
+El hash de un documento se cifra con una clave privada para verificar autenticidad.
+
+Bloques en blockchain ⛓️
+Cada bloque se identifica por un hash que depende de la información anterior, garantizando que no pueda alterarse.
+
+🧩 Ejemplos de funciones de hash más usadas
+
+MD5 → Antiguo, inseguro (ya no se usa en seguridad).
+
+SHA-1 → Mejor que MD5, pero también considerado débil.
+
+SHA-256 / SHA-512 → Muy usadas actualmente en ciberseguridad.
+
+bcrypt, scrypt, Argon2 → Especiales para contraseñas, más seguras porque incluyen “sal” y son lentas a propósito (difíciles de crackear).
+
+
+👉 En resumen:
+Una función de hash convierte datos en una huella digital única, ideal para garantizar integridad, seguridad y autenticación en ciberseguridad. 🔐
+
+
