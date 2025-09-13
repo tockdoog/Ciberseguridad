@@ -1,0 +1,23 @@
+¿Qué es Mutillidae? 🐛
+OWASP Mutillidae II es una aplicación web intencionalmente vulnerable, open-source, creada para enseñar y practicar seguridad 
+en aplicaciones web. Sirve como entorno de laboratorio para estudiantes, instructores, equipos de seguridad y participantes en 
+CTFs que quieran aprender sobre vulnerabilidades web de forma controlada.
+
+¿Para qué sirve? 🎯
+Practicar explotación y mitigación de vulnerabilidades web (SQLi, XSS, CSRF, etc.) en un entorno seguro y autorizado
+Probar y evaluar herramientas de seguridad (scanners, proxies, etc.). 
+Usarse en clases, laboratorios y preparación para certificaciones y ejercicios prácticos. 
+
+Características principales ✅
+Contiene muchas vulnerabilidades intencionadas (más de 40 retos) que cubren categorías del OWASP Top-10 y otras. 
+Incluye niveles/controles de seguridad, pistas y material didáctico integrado para aprender paso a paso. 
+Fácil de instalar en múltiples entornos: LAMP/XAMPP, Docker, y viene en algunas distribuciones/prebuilt VMs (SamuraiWTF, OWASP BWA). 
+
+Tecnología y requisitos 🖥️
+Está implementada en PHP y usa MySQL/MariaDB (o compatible).
+Puede instalarse en Linux/Windows usando un stack web (Apache + PHP + MySQL) o mediante contenedores Docker. 
+
+Buenas prácticas y advertencias ⚠️
+Solo instálala y usa Mutillidae en entornos locales o de prueba sobre los que tengas control y permiso. No la expongas a Internet público. 
+
+Úsala para aprender defensa y pruebas éticas: documenta tus hallazgos y sigue procesos responsables si aplicas conocimiento en sistemas reales (siempre con autorización). 

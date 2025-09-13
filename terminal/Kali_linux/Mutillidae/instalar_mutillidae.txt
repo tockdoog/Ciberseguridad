@@ -1,0 +1,50 @@
+Instalaremos Apache, MariaDB, PHP, clonaremos Mutillidae y configuraremos la base de datos. ✅
+
+1️⃣ Actualizar sistema 🧾
+sudo apt update && sudo apt upgrade -y
+
+2️⃣ Instalar LAMP y dependencias 🔧
+sudo apt install -y apache2 mariadb-server php php-mysqli php-xml php-curl php-mbstring unzip git
+sudo systemctl enable --now apache2
+sudo systemctl enable --now mariadb
+
+✅ Apache = servidor web
+✅ MariaDB = base de datos
+✅ PHP + extensiones = que corra Mutillidae
+
+3️⃣ Asegurar MariaDB (opcional, recomendado) 🔐
+sudo mysql_secure_installation
+
+Sigue las instrucciones para poner contraseña root y endurecer MariaDB. 🛡️
+
+4️⃣ Descargar Mutillidae (desde GitHub) 📥
+cd /var/www/html
+sudo git clone https://github.com/webpwnized/mutillidae.git
+(Alternativa: descargar ZIP si prefieres). 📦
+
+5️⃣ Permisos y propiedad del sitio 📁
+sudo chown -R www-data:www-data /var/www/html/mutillidae
+sudo find /var/www/html/mutillidae -type d -exec chmod 755 {} \;
+sudo find /var/www/html/mutillidae -type f -exec chmod 644 {} \;
+
+6️⃣ Crear la base de datos para Mutillidae 🗄️
+sudo mysql -u root -p
+# dentro de MariaDB:
+CREATE DATABASE mutillidae;
+CREATE USER 'mutillidae_user'@'localhost' IDENTIFIED BY 'TuPasswordSeguro';
+GRANT ALL PRIVILEGES ON mutillidae.* TO 'mutillidae_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+
+7️⃣ Verificar PHP y extensiones ⚙️
+Asegúrate de tener php-mysqli, php-xml, php-mbstring, php-curl. Si falta alguna, instálala y reinicia Apache:
+sudo apt install -y php-xml
+sudo systemctl restart apache2
+
+8️⃣ Reiniciar Apache 🔁
+sudo systemctl restart apache2
+
+9️⃣ Acceder a Mutillidae desde el navegador 🌐
+Abre en Kali o en la VM:
+http://localhost/mutillidae

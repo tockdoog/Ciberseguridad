@@ -1,0 +1,40 @@
+🩹 Simplemente URL /multillidae
+
+Se ve la lista de directorios de /multillidae(Apache mostrando el index of /multillidae) eso significa que apache esta sirviendo la carpeta
+pero no encuentra o no ejecutó un indice de (index.php/index.html) en la raiz que está como pagina o los archivos están
+dentro de src/ en lugar de en la raiz
+
+1️⃣Verifica si PHP está instalado
+php -v
+
+👍 si sale algo como PHP 8.41.11 significa que está instalado
+
+si no aparece la vestion de PHP
+sudo apt update
+sudo apt install php libapache2-mod-php -y
+
+2️⃣Revisar si apache está instalado
+sudo systemctl status apache2
+
+👍si sale un mensaje tipo AH00558: apache2 Could not reliably determine the server's fully...
+significa que esta activo y corriendo
+
+si no ejecuta:
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+
+3️⃣Instala el modulo de php para Apache
+sudo apt install libapache2-mod-php8.4 -y && sudo systemctl restart apache2
+
+
+1️⃣Verifica donde está el index.php
+
+sudo ls -la /var/www/html/multillidae
+sudo ls -la /var/www/html/multillidae/src
+
+Aca encontramos todo en el arbol el index
+
+sudo find /var/www/html/multillidae -maxdepth 3 -type f -iname "index.php"
+
+valida si en /var/www/html/multillidae tenga el archivo de index.php ✅
