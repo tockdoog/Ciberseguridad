@@ -1,0 +1,38 @@
+⚠️ Error de apertura WSL
+
+📄 Descripción del error:
+Después de ejecutar el comando:
+wsl --install
+
+Puede aparecer el siguiente mensaje:
+
+Subsistema de Windows para Linux no tiene distribuciones instaladas.
+Para resolverlo, instale una distribución con las instrucciones siguientes:
+Use 'wsl.exe --list --online' para enumerar las distribuciones disponibles 
+y "wsl.exe --install <Distro>" para instalar.
+
+❓ ¿Qué significa?
+👉 Significa que tienes habilitado WSL (Windows Subsystem for Linux) 🐧, 
+pero aún no tienes ninguna distribución de Linux instalada.
+
+🔧 Pasos para solucionarlo
+1️⃣ Abrir PowerShell como Administrador 🖥️⚡
+Presiona Win + X → selecciona Windows PowerShell (Admin).
+2️⃣ Ver las distribuciones disponibles 📜
+wsl --list --online
+
+Ejemplo de salida:
+NAME            FRIENDLY NAME
+Ubuntu          Ubuntu
+Debian          Debian GNU/Linux
+kali-linux      Kali Linux Rolling
+
+3️⃣ Instalar la distribución que prefieras 📥🐧
+Ejemplo para instalar Ubuntu:
+wsl --install -d Ubuntu
+
+4️⃣ Reiniciar la PC 🔄💻 cuando lo solicite.
+5️⃣ Configurar la distro al abrirla por primera vez 👤🔑
+Te pedirá crear un usuario y contraseña de Linux.
+
+✅ ¡Listo! Con esto el error queda solucionado y tendrás tu distro lista para usar en WSL 🚀🐧

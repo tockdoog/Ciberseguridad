@@ -1,0 +1,15 @@
+Kali Linux es un sistema operativo basado en Linux que está diseñado principalmente para seguridad informática, pruebas de penetración (pentesting), análisis forense digital y hacking ético. 🔐💻
+
+Te explico mejor:
+
+📀 Base: Está construido sobre Debian, una de las distribuciones más estables de Linux.
+
+🛠️ Herramientas incluidas: Viene con cientos de programas preinstalados, como Nmap, Metasploit, Wireshark, John the Ripper, Aircrack-ng, entre otros, que sirven para probar la seguridad de redes, sistemas y aplicaciones.
+
+👨‍💻 Usuarios principales: Lo utilizan hackers éticos, profesionales de ciberseguridad, investigadores forenses y administradores de sistemas.
+
+🔒 Propósito: No es para uso cotidiano (como ver películas o trabajar en oficina), sino para auditar la seguridad informática.
+
+👉 En resumen: Kali Linux es como una navaja suiza para la ciberseguridad.
+
+¿Quieres que te lo explique con un ejemplo sencillo tipo comparación con Windows o prefieres que te lo muestre con un mapa de usos principales?

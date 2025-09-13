@@ -1,0 +1,24 @@
+Tor es un proyecto de software libre 🌍 que permite navegar por internet de forma anónima y privada.
+
+🔹 ¿Qué significa "Tor"?
+La palabra viene de The Onion Router 🧅, porque usa un sistema de “capas de cifrado” (como una cebolla) para proteger tus datos.
+
+🔹 ¿Cómo funciona? ⚙️
+
+Cuando abres una página web usando Tor Browser, tu conexión no va directo al servidor.
+
+Pasa por varios nodos (computadores voluntarios) repartidos por el mundo 🌐.
+
+Cada nodo solo sabe un pedazo del camino, así nadie puede rastrear fácilmente tu actividad 🔒.
+
+🔹 ¿Para qué sirve?
+✅ Navegar de forma privada sin dejar rastro fácil.
+✅ Evitar bloqueos o censura en internet 🚫🌐.
+✅ Acceder a sitios de la dark web (dominios .onion) 🕸️.
+✅ Protegerse de rastreadores, vigilancia y espionaje digital 👀.
+
+🔹 Importante ⚠️
+Tor no es magia:
+Si usas tus cuentas personales (Facebook, Gmail, etc.) en Tor, pierdes el anonimato.
+No protege contra virus/malware, solo contra rastreo de red.
+Se recomienda no instalar plugins ni cambiar mucho la configuració

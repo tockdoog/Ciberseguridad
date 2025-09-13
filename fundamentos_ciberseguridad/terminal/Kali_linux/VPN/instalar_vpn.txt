@@ -1,0 +1,56 @@
+⚡ 1. Actualiza tu sistema
+sudo apt update && sudo apt upgrade -y
+
+🔄 Esto asegura que todo esté al día.
+
+📦 2. Instala dependencias necesarias
+sudo apt install -y python3-pip python3-setuptools openvpn dialog
+
+🐍 3. Instala ProtonVPN-CLI
+pip3 install protonvpn-cli
+sudo pip3 install protonvpn-cli
+
+✅ Ahora ya tienes el comando protonvpn-cli.
+
+⚙️ 4. Inicializa la configuración
+protonvpn-cli init
+
+🔑 Aquí colocas tu usuario/contraseña de Proton (los de OpenVPN/IKEv2, no el correo).
+
+
+🌍 5. Conectarte al VPN
+🚀 Conexión rápida al mejor servidor:
+protonvpn-cli c -f
+
+🇺🇸 Conectar a un país específico:
+protonvpn-cli c US
+
+❌ Desconectar:
+protonvpn-cli d
+
+🖥️ 6. Alternativa con el cliente oficial (protonvpn-app)
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3_all.deb
+sudo dpkg -i protonvpn-stable-release_1.0.3_all.deb
+sudo apt update
+sudo apt install proton-vpn-gnome-desktop -y
+
+👉 Después ya puedes usar:
+protonvpn-app
+
+
+
+🔎 1. Verifica tu dirección IP
+Antes de conectarte a la VPN:
+curl ifconfig.me
+(te muestra tu IP real).
+
+Después de conectarte a la VPN:
+curl ifconfig.me
+
+🔎 2. Haz un test de fugas DNS
+
+A veces, aunque la VPN esté activa, tus consultas DNS (qué páginas visitas) se filtran.
+Puedes verificarlo en la web:
+👉 https://www.dnsleaktest.com
+
+Si los servidores DNS corresponden a tu VPN y no a tu proveedor de internet, todo bien ✅.

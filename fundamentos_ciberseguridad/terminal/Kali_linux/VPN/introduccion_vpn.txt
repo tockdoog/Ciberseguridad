@@ -1,0 +1,37 @@
+Una VPN (Virtual Private Network, o Red Privada Virtual) en Kali Linux —y en cualquier otro sistema operativo— es una herramienta que crea un túnel seguro y cifrado entre tu computadora y un servidor remoto en internet.
+
+👉 Esto significa que cuando te conectas a internet a través de una VPN, tu tráfico no viaja directamente a la web, sino que pasa primero por el servidor VPN, lo que aporta varias ventajas.
+
+🔹 ¿Para qué sirve una VPN en Kali Linux?
+
+En el contexto de Kali Linux, que se usa mucho para ciberseguridad, hacking ético y pruebas de penetración, una VPN es especialmente útil porque:
+
+Privacidad y anonimato 🕵️‍♂️
+
+Oculta tu dirección IP real y la reemplaza por la del servidor VPN.
+
+Nadie (ni tu proveedor de internet, ni páginas web) puede ver desde dónde navegas realmente.
+
+Cifrado del tráfico 🔒
+
+Protege tus datos al usar redes Wi-Fi públicas o no confiables.
+
+Evita que alguien capture tu tráfico con técnicas como sniffing.
+
+Acceso a contenido restringido 🌍
+
+Puedes acceder a servicios o páginas bloqueadas en tu país o red local.
+
+Ejemplo: acceder a foros, herramientas o sitios necesarios para tus pruebas.
+
+Seguridad en auditorías y pruebas 💻⚡
+
+Si usas Kali Linux para practicar pentesting, la VPN puede ayudarte a:
+
+Simular accesos desde otros países.
+
+Mantener tu identidad más protegida cuando te conectas a laboratorios remotos (como HackTheBox o TryHackMe).
+
+Evitar bloqueos 🚫
+
+Algunas páginas o servicios bloquean escaneos o peticiones sospechosas. Con una VPN, puedes cambiar tu IP y seguir trabajando.

@@ -1,0 +1,44 @@
+Comandos paso a paso (explicación rápida) 🧭
+1️⃣Sustituye /ruta/a/Win10.iso por la ruta real de tu ISO.
+
+2️⃣Crear y registrar la VM:
+VBoxManage createvm --name "Win10-lab" --ostype Windows10_64 --register
+
+3️⃣Ajustar CPU/RAM y opciones básicas:
+VBoxManage modifyvm "Win10-lab" --memory 4096 --cpus 2 --vram 128 --ioapic on --boot1 dvd
+
+4️⃣Configurar tipo de red (Red interna llamada lab-net):
+VBoxManage modifyvm "Win10-lab" --nic1 intnet --intnet1 "lab-net"
+# Si quieres host-only en vez de red interna:
+# VBoxManage modifyvm "Win10-lab" --nic1 hostonly --hostonlyadapter1 vboxnet0
+
+5️⃣Crear disco virtual (VDI, 50 GB):
+VBoxManage createmedium disk --filename "$HOME/VirtualBox VMs/Win10-lab/Win10-lab.vdi" --size 51200 --format VDI
+
+6️⃣Añadir controladores de almacenamiento (SATA para disco, IDE para ISO):
+VBoxManage storagectl "Win10-lab" --name "SATA-Controller" --add sata --controller IntelAHCI
+VBoxManage storagectl "Win10-lab" --name "IDE-Controller" --add ide
+
+7️⃣Conectar el disco al controlador SATA:
+VBoxManage storageattach "Win10-lab" --storagectl "SATA-Controller" --port 0 --device 0 --type hdd --medium "$HOME/VirtualBox VMs/Win10-lab/Win10-lab.vdi"
+
+
+8️⃣Conectar la ISO de Windows al controlador IDE (CD/DVD):
+VBoxManage storageattach "Win10-lab" --storagectl "IDE-Controller" --port 0 --device 0 --type dvddrive --medium "/ruta/a/Win10.iso"
+
+
+9️⃣(Opcional) Habilitar virtualización anidada / acceleration si tu CPU lo permite:
+VBoxManage modifyvm "Win10-lab" --hwvirtex on --nested-hw-virt on
+
+Iniciar la VM en modo GUI (se abre la ventana de VirtualBox con el instalador):
+VBoxManage startvm "Win10-lab" --type gui
+
+
+Después de instalar Windows, para desmontar la ISO (desde host) y montar Guest Additions ISO:
+# desmontar ISO de instalación
+VBoxManage storageattach "Win10-lab" --storagectl "IDE-Controller" --port 0 --device 0 --type dvddrive --medium none
+
+# montar Guest Additions (ruta típica en Kali: /usr/share/virtualbox/VBoxGuestAdditions.iso)
+VBoxManage storageattach "Win10-lab" --storagectl "IDE-Controller" --port 0 --device 0 --type dvddrive --medium /usr/share/virtualbox/VBoxGuestAdditions.iso
+
+

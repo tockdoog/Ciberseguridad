@@ -1,0 +1,12 @@
+🔹 Método recomendado (con torbrowser-launcher)
+1️⃣ Actualizar paquetes 📦
+sudo apt update && sudo apt upgrade -y
+
+2️⃣ Instalar Tor y el lanzador 🕸️
+sudo apt install -y tor torbrowser-launcher
+
+3️⃣ Ejecutar el lanzador 🚀
+torbrowser-launcher
+
+👉 La primera vez descarga y verifica Tor Browser 🔐.
+

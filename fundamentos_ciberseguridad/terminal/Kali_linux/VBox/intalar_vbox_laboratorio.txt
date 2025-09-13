@@ -1,0 +1,75 @@
+🔹 Paso 1: Instalar VirtualBox en Kali Linux 🧰💻
+Abre la terminal y actualiza los repositorios:
+sudo apt update && sudo apt upgrade -y
+
+Luego instala VirtualBox:
+sudo apt install virtualbox -y
+
+Verifica la versión:
+virtualbox --version
+
+🔹 Paso 2: Descargar Windows 10 ISO 📥🖼️
+Tienes dos opciones:
+
+Descargar desde la página oficial de Microsoft: 👉 https://www.microsoft.com/es-es/software-download/windows10ISO
+
+O usar una ISO que ya tengas 💾
+
+🔹 Paso 3: Crear la Máquina Virtual en VirtualBox 🆕🖥️
+
+Abre VirtualBox en Kali.
+
+Clic en Nueva.
+Ponle nombre: Windows10.
+Tipo: Microsoft Windows.
+Versión: Windows 10 (64-bit).
+Configuración recomendada ⚙️:
+RAM: mínimo 4 GB (si tu PC tiene 8 GB, ponle 4 GB; si tienes 16 GB, ponle 6–8 GB).
+CPU: 2 núcleos mínimo.
+
+Disco duro virtual:
+
+    Formato: VDI.
+    Almacenamiento: Dinámicamente asignado.
+    Tamaño: 50–60 GB recomendado 💾
+
+🔹 Paso 4: Montar la ISO de Windows 10 💿🔗
+
+Selecciona tu máquina virtual creada.
+
+Ve a Configuración → Almacenamiento.
+
+En el apartado de CD/DVD, selecciona el ícono de disco y elige el archivo ISO de Windows 10.
+
+🔹 Paso 5: Instalar Windows 10 🛠️🚀
+
+Inicia la máquina virtual.
+
+Te aparecerá el instalador de Windows 10.
+
+Elige idioma, versión y partición (el disco virtual que creaste).
+
+Completa la instalación ✅
+
+
+🔹 Paso 6: Instalar Guest Additions (opcional pero recomendado) 🧩✨
+Dentro de Windows 10 (ya instalado):
+
+En la barra de VirtualBox → Dispositivos → Insertar imagen de CD de las Guest Additions.
+
+Se abrirá un instalador en Windows → instálalo.
+
+Esto mejora el rendimiento, permite pantalla completa y compartir carpetas 🖼️➡️🔗
+
+
+🔹 Paso 7: (Opcional) Configurar Red para Laboratorio de Ciberseguridad 🔒🌐
+Si quieres simular ataques, analiza las opciones de red:
+
+Modo NAT: Internet compartido desde Kali 🌍 (fácil y con salida a internet).
+
+Adaptador puente: Windows 10 aparece en tu red real como un equipo más 🕸️ (útil si necesitas que lo vea otros equipos).
+
+Red interna / Host-only: ideal para laboratorios — aislada, sin acceso a Internet, pero con comunicación entre Kali y Windows 🛡️🔁.
+
+Ejemplo para un lab de pentesting:
+Kali (atacante) ↔ Windows 10 (víctima) conectados en Red interna 🔁🕵️‍♂️➡️💻
