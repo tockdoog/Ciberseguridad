@@ -1,0 +1,63 @@
+👍 Guia de resolucion de problemas Mutillidae
+
+1️⃣ Verificar Apache y PHP
+Se ves pantalla en blanco o no carga nada:
+sudo systemctl status apache2
+sudo systemctl restart apache2
+
+👽Si Apache esta apagado inicialo
+sudo systemctl start apache2
+
+2️⃣Revisa error en los logs
+Cada vez que tengas pantalla en blanco revisa el log de errores Apache:
+sudo tail -f /var/log/apache2/error.log
+
+Undefined constant "DB_HOST" ▶️ Problema en configuración de bases de datos
+Permission denied ➡️ Apache no tiene persmisos
+Fatal error: Call to Undefined function mysqli_connect() ➡️ Falta instalar extensiones PHP
+
+3️⃣ Revisa el archivo de configuración de la BD
+Archivo clave:
+/var/www/html/mutillidae/src/includes/database-config.inc
+
+Debe usar constantes, no variables:
+<?php
+define('DB_HOST', '127.0.0.1');
+define('DB_PORT','3306');
+define('DB_USERNAME', 'mutillidae');
+define('DB_PASSWORD','mutillidae');
+define('DB_NAME','mutillidae');
+?>
+
+4️⃣Revisa si MySQL está activo
+sudo systemctl status mysql
+
+si no esta corriendo:
+sudo systemctl start mysql
+
+5️⃣Verificar usuario y base de datos
+Si da error de conexion, entra a MySQL y revisa
+sudo mysql -u root -p
+
+Dentro de MySQL
+CREATE DATABASE mutillidae;
+CREATE USER 'mutillidae'@'localhost' IDENTIFIED BY 'mutillidae';
+GRANT ALL PRIVILEGES ON mutillidae.* TO 'mutillidae'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+
+6️⃣Instalar BD de mutillidae
+si el script set-up-database.php no function, puedes importar manualmente el SQL:
+mysql -u mutillidae -p mutillidae </var/www/html/mutillidae/database/mutillidae.SQL
+
+7️⃣Extensiones PHP necesarias
+Si aparecen errores de conexion:
+sudo apt install php-mysql php-xml php-mbstring -y
+sudo systemctl restart apache2
+
+8️⃣Errores comun
+Pantalla blanca ➡️ revisa /var/log/apache2/error.log
+DB_HOST Undefined ➡️ cambia variables por define().
+Access denied for user ➡️ crea usuario y da permisos en MySQL
+mysqli_connect()Undefined ➡️ falta instalar php-mysql 
