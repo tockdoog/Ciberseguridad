@@ -1,0 +1,42 @@
+📖 Glosario de Ciberseguridad   
+
+🔹 Taxonomía
+
+Es una forma de clasificar y organizar cosas en grupos según sus características. En ciberseguridad, se usa para ordenar amenazas, vulnerabilidades o ataques en 
+categorías.
+
+🔹 Hoax
+Significa engaño o bulo. Son mensajes falsos que circulan en internet (correos, WhatsApp, redes sociales) con la intención de asustar, engañar o manipular.
+
+🔹 AWS (Amazon Web Services)
+Plataforma de servicios en la nube de Amazon: servidores, bases de datos, almacenamiento, inteligencia artificial, etc. Muy usada por empresas para alojar
+aplicaciones y sitios web.
+
+🔹 Wireshark
+Herramienta de análisis de tráfico de red. Permite capturar y examinar paquetes de datos para detectar problemas, intrusiones o conexiones sospechosas.
+
+🔹 CGI (Common Gateway Interface)
+Tecnología que permite a un servidor web ejecutar programas externos (scripts) para generar contenido dinámico. Ejemplo: un formulario que envía datos a 
+un programa que devuelve una página personalizada.
+
+🔹 Malwarebytes
+Un software de antivirus y antimalware que detecta y elimina virus, troyanos, ransomware, spyware y otras amenazas en computadoras y móviles.
+
+🔹 Armitage
+Interfaz gráfica de Metasploit. Facilita la explotación de vulnerabilidades, gestión de ataques y trabajo en equipo durante pruebas de penetración.
+
+🔹 DoS / DDoS (Denial of Service / Distributed Denial of Service)
+Ataques que buscan saturar un sistema o servidor con muchas peticiones para que deje de funcionar.
+DoS: ataque desde un solo equipo.
+DDoS: ataque distribuido desde muchos equipos al mismo tiempo.
+
+🔹 XSS (Cross-Site Scripting)
+Vulnerabilidad en aplicaciones web que permite a un atacante inyectar código malicioso (JavaScript) en una página. Esto puede robar cookies,
+credenciales o engañar a los usuarios.
+
+🔹 OSINT (Open Source Intelligence)Búsqueda y recolección de información a partir de fuentes públicas: redes sociales, sitios web, foros, buscadores, etc.
+ Se usa para investigación de seguridad, auditorías y análisis de riesgos.
+
+ 🔹 SIEM (Security Information and Event Management)
+ Plataforma que recopila y analiza en tiempo real los eventos y registros de seguridad de una empresa. Sirve para detectar incidentes, correlacionar alertas
+  y responder rápidamente. Ejemplo: Splunk, QRadar, AlienVault.
