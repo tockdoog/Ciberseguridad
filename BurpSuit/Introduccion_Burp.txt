@@ -1,0 +1,27 @@
+Qué es Burp Suite? 🤖🕵️‍♂️
+
+Burp Suite es una caja de herramientas para probar la seguridad de aplicaciones web: actúa como proxy que intercepta el tráfico entre tu navegador y el servidor, y trae
+herramientas para modificar peticiones, automatizar pruebas y analizar respuestas.
+
+Analogía: Burp = taller + traductor + detective. Imagina que la web es una carretera: Burp es el puesto de peaje donde puedes parar cada coche (petición), abrirlo, mirar
+lo que lleva, cambiar algo y dejarlo seguir.
+
+Para qué sirve🛠️
+Proxy / Intercept: 🛑➡️👀 — detiene y muestra peticiones/respuestas.
+Repeater: 🔁 — reenvía y modifica una petición muchas veces (pruebas manuales).
+Intruder: 🎯 — fuerza/fuzzing automatizado contra parámetros (con cuidado).
+Scanner (Pro): 🧭 — escaneo automático de vulnerabilidades.
+Decoder / Comparer / Sequencer: 🧩 — utilidades para decodificar, comparar y analizar aleatoriedad. 
+
+🧮
+Proxy (Intercept) — Portero en la puerta de un club: decide quién entra, puede revisar bolsos y cambiar algo antes de que el cliente entre al local.
+Repeater — Probador de reacciones: es como tener un mando a distancia para repetir la misma acción con distintos botones y ver qué cambia.
+Intruder — Máquina de pruebas en fábrica: lanza variaciones en serie para ver qué piezas fallan (pero si no tienes permiso, puedes romper la máquina — 
+legalmente peligroso). 
+
+Cómo se usa — mini-guía con emojis (lo esencial) ⚙️
+Arranca Burp y asegúrate que el listener está en 127.0.0.1:8080. 🖥️➡️🔌. 
+Configura tu navegador para usar proxy 127.0.0.1:8080 (o usa FoxyProxy). 🧭➡️🌐. 
+Descarga e instala el certificado CA de Burp en Firefox (Authorities) para interceptar HTTPS sin warnings. 📥🔐➡️✅. 
+Activa Intercept ON y navega; verás peticiones detenidas — edítalas y presiona Forward o envíalas a Repeater. 🛑✏️🔁. 
+

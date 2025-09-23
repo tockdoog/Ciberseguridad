@@ -1,0 +1,52 @@
+🔎 ¿Qué es LOIC?
+LOIC (Low Orbit Ion Cannon) es una herramienta de stress testing de red.
+👉 Fue popular porque grupos como Anonymous la usaron para hacer ataques DDoS.
+
+Analogía:
+Imagina que un restaurante 🍔 tiene una sola ventanilla de atención. Si llegan 10 clientes normales, atienden bien. Pero si de repente llegan 10.000 personas a la 
+vez gritando órdenes, el restaurante se colapsa. Eso es un ataque DDoS con LOIC.
+
+🔎 ¿Qué es HOIC?
+HOIC (High Orbit Ion Cannon) es la evolución de LOIC.
+Puede lanzar ataques más potentes 💥
+Usa algo llamado “booster scripts” 📜 que hacen que el ataque sea más difícil de detener.
+
+Analogía:
+Si LOIC es como lanzar muchas pelotas de tenis 🎾 contra una ventana hasta que se rompa, HOIC es como lanzar pelotas de béisbol con un cañón ⚾💣.
+
+🎯 ¿Para qué sirven?
+Oficialmente: para pruebas de estrés en servidores y verificar la capacidad de tu propia red. 🖥️
+En la práctica: se usaron para ataques DDoS ilegales contra webs de bancos, gobiernos o empresas 🚫.
+
+⚠️ Importante: Usar LOIC o HOIC contra sistemas que no son tuyos es ilegal. Solo debes usarlos en tu propio servidor o laboratorio.
+
+
+⚙️ ¿Cómo se usan en Kali Linux?
+Instalar LOIC o HOIC (no siempre vienen por defecto, se descargan desde GitHub o repositorios).
+sudo apt-get update
+sudo apt-get install mono-complete
+git clone https://github.com/NewEraCracker/LOIC.git
+cd LOIC
+mono LOIC.exe
+
+
+Configurar el objetivo (Target):
+IP o dominio de la web 🎯
+Puerto (ej. 80 para HTTP)
+
+Elegir el tipo de ataque:
+TCP
+UDP
+HTTP
+
+Ajustar la intensidad:
+Cantidad de peticiones 🔄
+Velocidad ⚡
+
+Iniciar el “fuego”: 🔫
+
+
+🚦 Analogía final
+LOIC = pistola de agua a presión 🚿, molesta pero fácil de frenar.
+HOIC = cañón de agua de bomberos 🚒, mucho más potente.
+
